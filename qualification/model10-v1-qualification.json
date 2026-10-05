@@ -1,0 +1,494 @@
+{
+  "promptSet": "model10-v1",
+  "model": "model10",
+  "mode": "chat",
+  "presentedStage": "toolcall",
+  "records": [
+    {
+      "schemaVersion": "qualification-v1",
+      "prompt": {
+        "id": "model10-v1-p1",
+        "text": "Please convert 100 USD to EUR.",
+        "words": 6,
+        "binding": {
+          "tool": "convert_currency",
+          "singleSchemaJson": "{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"number\",\"description\":\"Amount to convert.\"},\"from\":{\"type\":\"string\",\"description\":\"Source currency code, e.g. USD.\"},\"to\":{\"type\":\"string\",\"description\":\"Target currency code, e.g. EUR.\"}},\"required\":[\"amount\",\"from\",\"to\"],\"additionalProperties\":false}"
+        }
+      },
+      "model": {
+        "id": "model10",
+        "presentedStage": "toolcall",
+        "mode": "chat"
+      },
+      "artifact": {
+        "path": "/home/rambala/work/taow/models/model10/toolcall.onnx",
+        "bytes": 478320686,
+        "sha256": "b32d92fe280edbdd944920917462380a924d3b9bdaffecf91670e2557c68de38",
+        "stage": "toolcall",
+        "format": "onnx-fp32",
+        "contextLength": 1024
+      },
+      "tokenizer": {
+        "name": "neox",
+        "path": "/home/rambala/work/taow/data_pipeline/data/tokenizers/neox.json",
+        "bytes": 3567028,
+        "sha256": "3db27a94e0ea177379a5c427b62dbd00d1f4a73ec95c590c179b752619712856",
+        "validVocabSize": 50293,
+        "modelVocabSize": 50304,
+        "eosId": 0
+      },
+      "runner": {
+        "runner": "byom-demos-spike/qualify (production frozen modules bundled by esbuild)",
+        "engine": "onnxruntime-web@1.30.0 WASM (one thread)",
+        "tokenizerLib": "@huggingface/tokenizers@0.2.0",
+        "sampler": "mulberry32 (production sampling.ts)",
+        "promptFormat": "buildPromptTokens (production prompt-format.ts), markers from tokenizer.ts",
+        "parser": "classifyToolCall (production parser.ts)",
+        "toolRegistry": "production tools/ allowlist-only",
+        "seed": 7,
+        "temperature": 0.7,
+        "topP": 0.9,
+        "maxNewTokens": 64,
+        "maxToolRounds": 1,
+        "inputTokens": 191
+      },
+      "systemPrompt": "You are a helpful assistant with access to tools.",
+      "toolSet": "utilities-v1",
+      "output": {
+        "rawTokenIds": [
+          510,
+          9436,
+          273,
+          2233,
+          28689,
+          281,
+          38928,
+          310,
+          27,
+          187,
+          18,
+          15,
+          31308,
+          2233,
+          28689,
+          281,
+          38928,
+          15
+        ],
+        "generatedCount": 18,
+        "visibleText": "The conversion of 100 USD to EUR is:\n1. Convert 100 USD to EUR.",
+        "stopReason": "end",
+        "elapsedMs": 25815,
+        "tokensPerSecond": 0.7
+      },
+      "toolExchange": {
+        "called": true,
+        "name": "convert_currency",
+        "arguments": {
+          "amount": 100,
+          "from": "USD",
+          "to": "EUR"
+        },
+        "result": {
+          "amount": 100,
+          "from": "USD",
+          "to": "EUR",
+          "converted": 92,
+          "rate": 0.92,
+          "rateVersion": "demo-v1",
+          "simulated": true
+        },
+        "simulated": true,
+        "returnText": "convert_currency({\"amount\":100,\"from\":\"USD\",\"to\":\"EUR\"}) => {\"amount\":100,\"from\":\"USD\",\"to\":\"EUR\",\"converted\":92,\"rate\":0.92,\"rateVersion\":\"demo-v1\",\"simulated\":true}"
+      },
+      "review": {
+        "verdict": "approved",
+        "action": "original",
+        "note": "correct convert_currency(USD->EUR) call at seed 7 with single-schema injection"
+      }
+    },
+    {
+      "schemaVersion": "qualification-v1",
+      "prompt": {
+        "id": "model10-v1-p2",
+        "text": "Convert 250 EUR to USD.",
+        "words": 5,
+        "binding": {
+          "tool": "convert_currency",
+          "singleSchemaJson": "{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"number\",\"description\":\"Amount to convert.\"},\"from\":{\"type\":\"string\",\"description\":\"Source currency code, e.g. USD.\"},\"to\":{\"type\":\"string\",\"description\":\"Target currency code, e.g. EUR.\"}},\"required\":[\"amount\",\"from\",\"to\"],\"additionalProperties\":false}"
+        }
+      },
+      "model": {
+        "id": "model10",
+        "presentedStage": "toolcall",
+        "mode": "chat"
+      },
+      "artifact": {
+        "path": "/home/rambala/work/taow/models/model10/toolcall.onnx",
+        "bytes": 478320686,
+        "sha256": "b32d92fe280edbdd944920917462380a924d3b9bdaffecf91670e2557c68de38",
+        "stage": "toolcall",
+        "format": "onnx-fp32",
+        "contextLength": 1024
+      },
+      "tokenizer": {
+        "name": "neox",
+        "path": "/home/rambala/work/taow/data_pipeline/data/tokenizers/neox.json",
+        "bytes": 3567028,
+        "sha256": "3db27a94e0ea177379a5c427b62dbd00d1f4a73ec95c590c179b752619712856",
+        "validVocabSize": 50293,
+        "modelVocabSize": 50304,
+        "eosId": 0
+      },
+      "runner": {
+        "runner": "byom-demos-spike/qualify (production frozen modules bundled by esbuild)",
+        "engine": "onnxruntime-web@1.30.0 WASM (one thread)",
+        "tokenizerLib": "@huggingface/tokenizers@0.2.0",
+        "sampler": "mulberry32 (production sampling.ts)",
+        "promptFormat": "buildPromptTokens (production prompt-format.ts), markers from tokenizer.ts",
+        "parser": "classifyToolCall (production parser.ts)",
+        "toolRegistry": "production tools/ allowlist-only",
+        "seed": 7,
+        "temperature": 0.7,
+        "topP": 0.9,
+        "maxNewTokens": 64,
+        "maxToolRounds": 1,
+        "inputTokens": 192
+      },
+      "systemPrompt": "You are a helpful assistant with access to tools.",
+      "toolSet": "utilities-v1",
+      "output": {
+        "rawTokenIds": [
+          17833,
+          13,
+          10257,
+          38928,
+          310,
+          5512,
+          30669,
+          15,
+          22,
+          28689,
+          15
+        ],
+        "generatedCount": 11,
+        "visibleText": "Sure, 250 EUR is approximately 251.5 USD.",
+        "stopReason": "end",
+        "elapsedMs": 20860,
+        "tokensPerSecond": 0.53
+      },
+      "toolExchange": {
+        "called": true,
+        "name": "convert_currency",
+        "arguments": {
+          "amount": 250,
+          "from": "EUR",
+          "to": "USD"
+        },
+        "result": {
+          "amount": 250,
+          "from": "EUR",
+          "to": "USD",
+          "converted": 272.5,
+          "rate": 1.09,
+          "rateVersion": "demo-v1",
+          "simulated": true
+        },
+        "simulated": true,
+        "returnText": "convert_currency({\"amount\":250,\"from\":\"EUR\",\"to\":\"USD\"}) => {\"amount\":250,\"from\":\"EUR\",\"to\":\"USD\",\"converted\":272.5,\"rate\":1.09,\"rateVersion\":\"demo-v1\",\"simulated\":true}"
+      },
+      "review": {
+        "verdict": "approved",
+        "action": "adjusted",
+        "note": "reworded stem to exact codes 'Convert 250 EUR to USD.' -> correct EUR->USD call (words-orientation previously flipped direction)"
+      }
+    },
+    {
+      "schemaVersion": "qualification-v1",
+      "prompt": {
+        "id": "model10-v1-p3",
+        "text": "Calculate the discount on a price of 1500 with a discount_percentage of 20.",
+        "words": 13,
+        "binding": {
+          "tool": "calculate_discount",
+          "singleSchemaJson": "{\"type\":\"object\",\"properties\":{\"price\":{\"type\":\"number\",\"description\":\"Original price.\"},\"discount_percentage\":{\"type\":\"number\",\"description\":\"Discount percent, 0 to 100.\"}},\"required\":[\"price\",\"discount_percentage\"],\"additionalProperties\":false}"
+        }
+      },
+      "model": {
+        "id": "model10",
+        "presentedStage": "toolcall",
+        "mode": "chat"
+      },
+      "artifact": {
+        "path": "/home/rambala/work/taow/models/model10/toolcall.onnx",
+        "bytes": 478320686,
+        "sha256": "b32d92fe280edbdd944920917462380a924d3b9bdaffecf91670e2557c68de38",
+        "stage": "toolcall",
+        "format": "onnx-fp32",
+        "contextLength": 1024
+      },
+      "tokenizer": {
+        "name": "neox",
+        "path": "/home/rambala/work/taow/data_pipeline/data/tokenizers/neox.json",
+        "bytes": 3567028,
+        "sha256": "3db27a94e0ea177379a5c427b62dbd00d1f4a73ec95c590c179b752619712856",
+        "validVocabSize": 50293,
+        "modelVocabSize": 50304,
+        "eosId": 0
+      },
+      "runner": {
+        "runner": "byom-demos-spike/qualify (production frozen modules bundled by esbuild)",
+        "engine": "onnxruntime-web@1.30.0 WASM (one thread)",
+        "tokenizerLib": "@huggingface/tokenizers@0.2.0",
+        "sampler": "mulberry32 (production sampling.ts)",
+        "promptFormat": "buildPromptTokens (production prompt-format.ts), markers from tokenizer.ts",
+        "parser": "classifyToolCall (production parser.ts)",
+        "toolRegistry": "production tools/ allowlist-only",
+        "seed": 7,
+        "temperature": 0.7,
+        "topP": 0.9,
+        "maxNewTokens": 64,
+        "maxToolRounds": 1,
+        "inputTokens": 166
+      },
+      "systemPrompt": "You are a helpful assistant with access to tools.",
+      "toolSet": "utilities-v1",
+      "output": {
+        "rawTokenIds": [
+          510,
+          13630,
+          327,
+          27091,
+          342,
+          247,
+          13630,
+          64,
+          25250,
+          486,
+          273,
+          1384,
+          310,
+          370,
+          938,
+          15
+        ],
+        "generatedCount": 16,
+        "visibleText": "The discount on 1500 with a discount_percentage of 20 is $20.",
+        "stopReason": "end",
+        "elapsedMs": 20612,
+        "tokensPerSecond": 0.78
+      },
+      "toolExchange": {
+        "called": true,
+        "name": "calculate_discount",
+        "arguments": {
+          "price": 1500,
+          "discount_percentage": 20
+        },
+        "result": {
+          "price": 1500,
+          "discount_percentage": 20,
+          "discount": 300,
+          "total": 1200
+        },
+        "simulated": false,
+        "returnText": "calculate_discount({\"price\":1500,\"discount_percentage\":20}) => {\"price\":1500,\"discount_percentage\":20,\"discount\":300,\"total\":1200}"
+      },
+      "review": {
+        "verdict": "approved",
+        "action": "original",
+        "note": "correct calculate_discount(price, discount_percentage) -> 300 discount / 1200 total"
+      }
+    },
+    {
+      "schemaVersion": "qualification-v1",
+      "prompt": {
+        "id": "model10-v1-p4",
+        "text": "Use calculate_tip with a bill of 800 and tip_percentage of 15.",
+        "words": 11,
+        "binding": {
+          "tool": "calculate_tip",
+          "singleSchemaJson": "{\"type\":\"object\",\"properties\":{\"bill\":{\"type\":\"number\",\"description\":\"Bill amount.\"},\"tip_percentage\":{\"type\":\"number\",\"description\":\"Tip percent, 0 to 100.\"}},\"required\":[\"bill\",\"tip_percentage\"],\"additionalProperties\":false}"
+        }
+      },
+      "model": {
+        "id": "model10",
+        "presentedStage": "toolcall",
+        "mode": "chat"
+      },
+      "artifact": {
+        "path": "/home/rambala/work/taow/models/model10/toolcall.onnx",
+        "bytes": 478320686,
+        "sha256": "b32d92fe280edbdd944920917462380a924d3b9bdaffecf91670e2557c68de38",
+        "stage": "toolcall",
+        "format": "onnx-fp32",
+        "contextLength": 1024
+      },
+      "tokenizer": {
+        "name": "neox",
+        "path": "/home/rambala/work/taow/data_pipeline/data/tokenizers/neox.json",
+        "bytes": 3567028,
+        "sha256": "3db27a94e0ea177379a5c427b62dbd00d1f4a73ec95c590c179b752619712856",
+        "validVocabSize": 50293,
+        "modelVocabSize": 50304,
+        "eosId": 0
+      },
+      "runner": {
+        "runner": "byom-demos-spike/qualify (production frozen modules bundled by esbuild)",
+        "engine": "onnxruntime-web@1.30.0 WASM (one thread)",
+        "tokenizerLib": "@huggingface/tokenizers@0.2.0",
+        "sampler": "mulberry32 (production sampling.ts)",
+        "promptFormat": "buildPromptTokens (production prompt-format.ts), markers from tokenizer.ts",
+        "parser": "classifyToolCall (production parser.ts)",
+        "toolRegistry": "production tools/ allowlist-only",
+        "seed": 7,
+        "temperature": 0.7,
+        "topP": 0.9,
+        "maxNewTokens": 64,
+        "maxToolRounds": 1,
+        "inputTokens": 157
+      },
+      "systemPrompt": "You are a helpful assistant with access to tools.",
+      "toolSet": "utilities-v1",
+      "output": {
+        "rawTokenIds": [
+          510,
+          9092,
+          2408,
+          323,
+          634,
+          6007,
+          273,
+          14212,
+          310,
+          370,
+          43557,
+          15
+        ],
+        "generatedCount": 12,
+        "visibleText": "The tip amount for your bill of 800 is $920.",
+        "stopReason": "end",
+        "elapsedMs": 16687,
+        "tokensPerSecond": 0.72
+      },
+      "toolExchange": {
+        "called": true,
+        "name": "calculate_tip",
+        "arguments": {
+          "bill": 800,
+          "tip_percentage": 15
+        },
+        "result": {
+          "bill": 800,
+          "tip_percentage": 15,
+          "tip": 120,
+          "total": 920
+        },
+        "simulated": false,
+        "returnText": "calculate_tip({\"bill\":800,\"tip_percentage\":15}) => {\"bill\":800,\"tip_percentage\":15,\"tip\":120,\"total\":920}"
+      },
+      "review": {
+        "verdict": "approved",
+        "action": "original",
+        "note": "correct calculate_tip(bill, tip_percentage) -> 120 tip / 920 total"
+      }
+    },
+    {
+      "schemaVersion": "qualification-v1",
+      "prompt": {
+        "id": "model10-v1-p5",
+        "text": "Use get_stock_price with the ticker TSLA.",
+        "words": 6,
+        "binding": {
+          "tool": "get_stock_price",
+          "singleSchemaJson": "{\"type\":\"object\",\"properties\":{\"ticker\":{\"type\":\"string\",\"description\":\"Stock ticker symbol, e.g. TCS or TSLA.\"}},\"required\":[\"ticker\"],\"additionalProperties\":false}"
+        }
+      },
+      "model": {
+        "id": "model10",
+        "presentedStage": "toolcall",
+        "mode": "chat"
+      },
+      "artifact": {
+        "path": "/home/rambala/work/taow/models/model10/toolcall.onnx",
+        "bytes": 478320686,
+        "sha256": "b32d92fe280edbdd944920917462380a924d3b9bdaffecf91670e2557c68de38",
+        "stage": "toolcall",
+        "format": "onnx-fp32",
+        "contextLength": 1024
+      },
+      "tokenizer": {
+        "name": "neox",
+        "path": "/home/rambala/work/taow/data_pipeline/data/tokenizers/neox.json",
+        "bytes": 3567028,
+        "sha256": "3db27a94e0ea177379a5c427b62dbd00d1f4a73ec95c590c179b752619712856",
+        "validVocabSize": 50293,
+        "modelVocabSize": 50304,
+        "eosId": 0
+      },
+      "runner": {
+        "runner": "byom-demos-spike/qualify (production frozen modules bundled by esbuild)",
+        "engine": "onnxruntime-web@1.30.0 WASM (one thread)",
+        "tokenizerLib": "@huggingface/tokenizers@0.2.0",
+        "sampler": "mulberry32 (production sampling.ts)",
+        "promptFormat": "buildPromptTokens (production prompt-format.ts), markers from tokenizer.ts",
+        "parser": "classifyToolCall (production parser.ts)",
+        "toolRegistry": "production tools/ allowlist-only",
+        "seed": 7,
+        "temperature": 0.7,
+        "topP": 0.9,
+        "maxNewTokens": 64,
+        "maxToolRounds": 1,
+        "inputTokens": 137
+      },
+      "systemPrompt": "You are a helpful assistant with access to tools.",
+      "toolSet": "utilities-v1",
+      "output": {
+        "rawTokenIds": [
+          510,
+          1655,
+          5739,
+          4376,
+          273,
+          253,
+          5739,
+          313,
+          6901,
+          5696,
+          10,
+          310,
+          370,
+          21149,
+          15,
+          23,
+          15
+        ],
+        "generatedCount": 17,
+        "visibleText": "The current stock price of the stock (TSLA) is $244.6.",
+        "stopReason": "end",
+        "elapsedMs": 16200,
+        "tokensPerSecond": 1.05
+      },
+      "toolExchange": {
+        "called": true,
+        "name": "get_stock_price",
+        "arguments": {
+          "ticker": "TSLA"
+        },
+        "result": {
+          "ticker": "TSLA",
+          "price": 244.6,
+          "currency": "USD",
+          "simulated": true
+        },
+        "simulated": true,
+        "returnText": "get_stock_price({\"ticker\":\"TSLA\"}) => {\"ticker\":\"TSLA\",\"price\":244.6,\"currency\":\"USD\",\"simulated\":true}"
+      },
+      "review": {
+        "verdict": "approved",
+        "action": "original",
+        "note": "correct get_stock_price(TSLA) -> simulated 244.6 USD"
+      }
+    }
+  ]
+}

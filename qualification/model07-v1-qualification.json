@@ -1,0 +1,414 @@
+{
+  "promptSet": "model07-v1",
+  "model": "model07",
+  "mode": "chat",
+  "presentedStage": "sft",
+  "records": [
+    {
+      "schemaVersion": "qualification-v1",
+      "prompt": {
+        "id": "model07-v1-p1",
+        "text": "What does Article 21 of the Indian Constitution guarantee? Answer in two sentences.",
+        "words": 13,
+        "binding": {
+          "tool": null,
+          "singleSchemaJson": null
+        }
+      },
+      "model": {
+        "id": "model07",
+        "presentedStage": "sft",
+        "mode": "chat"
+      },
+      "artifact": {
+        "path": "/home/rambala/work/taow/models/model07/sft.onnx",
+        "bytes": 478320686,
+        "sha256": "f3c9ba40a1a005acd5da0b59dfae85b6d9b23063ca8886ea472ed26eaadff0b3",
+        "stage": "sft",
+        "format": "onnx-fp32",
+        "contextLength": 1024
+      },
+      "tokenizer": {
+        "name": "neox",
+        "path": "/home/rambala/work/taow/data_pipeline/data/tokenizers/neox.json",
+        "bytes": 3567028,
+        "sha256": "3db27a94e0ea177379a5c427b62dbd00d1f4a73ec95c590c179b752619712856",
+        "validVocabSize": 50293,
+        "modelVocabSize": 50304,
+        "eosId": 0
+      },
+      "runner": {
+        "runner": "byom-demos-spike/qualify (production frozen modules bundled by esbuild)",
+        "engine": "onnxruntime-web@1.30.0 WASM (one thread)",
+        "tokenizerLib": "@huggingface/tokenizers@0.2.0",
+        "sampler": "mulberry32 (production sampling.ts)",
+        "promptFormat": "buildPromptTokens (production prompt-format.ts), markers from tokenizer.ts",
+        "parser": "classifyToolCall (production parser.ts)",
+        "toolRegistry": "production tools/ allowlist-only",
+        "seed": 7,
+        "temperature": 0.7,
+        "topP": 0.9,
+        "maxNewTokens": 64,
+        "maxToolRounds": 0,
+        "inputTokens": 43
+      },
+      "systemPrompt": "You are an educational guide to Indian law. Explain basics in plain language. This is not legal advice.",
+      "toolSet": "",
+      "output": {
+        "rawTokenIds": [
+          30858,
+          3127,
+          273,
+          253,
+          5396,
+          10350,
+          23632,
+          13919,
+          273,
+          5107,
+          285,
+          7185,
+          273,
+          6519,
+          15
+        ],
+        "generatedCount": 15,
+        "visibleText": "Article 21 of the Indian Constitution guarantees equality of opportunity and freedom of speech.",
+        "stopReason": "end",
+        "elapsedMs": 2912,
+        "tokensPerSecond": 5.15
+      },
+      "toolExchange": null,
+      "review": {
+        "verdict": "approved",
+        "action": "original",
+        "note": "kept as candidate; short on-topic answer about Article 21"
+      }
+    },
+    {
+      "schemaVersion": "qualification-v1",
+      "prompt": {
+        "id": "model07-v1-p2",
+        "text": "What is a First Information Report?",
+        "words": 6,
+        "binding": {
+          "tool": null,
+          "singleSchemaJson": null
+        }
+      },
+      "model": {
+        "id": "model07",
+        "presentedStage": "sft",
+        "mode": "chat"
+      },
+      "artifact": {
+        "path": "/home/rambala/work/taow/models/model07/sft.onnx",
+        "bytes": 478320686,
+        "sha256": "f3c9ba40a1a005acd5da0b59dfae85b6d9b23063ca8886ea472ed26eaadff0b3",
+        "stage": "sft",
+        "format": "onnx-fp32",
+        "contextLength": 1024
+      },
+      "tokenizer": {
+        "name": "neox",
+        "path": "/home/rambala/work/taow/data_pipeline/data/tokenizers/neox.json",
+        "bytes": 3567028,
+        "sha256": "3db27a94e0ea177379a5c427b62dbd00d1f4a73ec95c590c179b752619712856",
+        "validVocabSize": 50293,
+        "modelVocabSize": 50304,
+        "eosId": 0
+      },
+      "runner": {
+        "runner": "byom-demos-spike/qualify (production frozen modules bundled by esbuild)",
+        "engine": "onnxruntime-web@1.30.0 WASM (one thread)",
+        "tokenizerLib": "@huggingface/tokenizers@0.2.0",
+        "sampler": "mulberry32 (production sampling.ts)",
+        "promptFormat": "buildPromptTokens (production prompt-format.ts), markers from tokenizer.ts",
+        "parser": "classifyToolCall (production parser.ts)",
+        "toolRegistry": "production tools/ allowlist-only",
+        "seed": 7,
+        "temperature": 0.7,
+        "topP": 0.9,
+        "maxNewTokens": 64,
+        "maxToolRounds": 0,
+        "inputTokens": 35
+      },
+      "systemPrompt": "You are an educational guide to Indian law. Explain basics in plain language. This is not legal advice.",
+      "toolSet": "",
+      "output": {
+        "rawTokenIds": [
+          34,
+          3973,
+          8339,
+          10840,
+          310,
+          247,
+          4320,
+          1304,
+          15
+        ],
+        "generatedCount": 9,
+        "visibleText": "A First Information Report is a legal report.",
+        "stopReason": "end",
+        "elapsedMs": 1500,
+        "tokensPerSecond": 6
+      },
+      "toolExchange": null,
+      "review": {
+        "verdict": "approved",
+        "action": "adjusted",
+        "note": "replaced echo-prone 'Explain in two sentences...' with 'What is a First Information Report?' -> crisp answer"
+      }
+    },
+    {
+      "schemaVersion": "qualification-v1",
+      "prompt": {
+        "id": "model07-v1-p3",
+        "text": "List two fundamental rights from the Indian Constitution.",
+        "words": 8,
+        "binding": {
+          "tool": null,
+          "singleSchemaJson": null
+        }
+      },
+      "model": {
+        "id": "model07",
+        "presentedStage": "sft",
+        "mode": "chat"
+      },
+      "artifact": {
+        "path": "/home/rambala/work/taow/models/model07/sft.onnx",
+        "bytes": 478320686,
+        "sha256": "f3c9ba40a1a005acd5da0b59dfae85b6d9b23063ca8886ea472ed26eaadff0b3",
+        "stage": "sft",
+        "format": "onnx-fp32",
+        "contextLength": 1024
+      },
+      "tokenizer": {
+        "name": "neox",
+        "path": "/home/rambala/work/taow/data_pipeline/data/tokenizers/neox.json",
+        "bytes": 3567028,
+        "sha256": "3db27a94e0ea177379a5c427b62dbd00d1f4a73ec95c590c179b752619712856",
+        "validVocabSize": 50293,
+        "modelVocabSize": 50304,
+        "eosId": 0
+      },
+      "runner": {
+        "runner": "byom-demos-spike/qualify (production frozen modules bundled by esbuild)",
+        "engine": "onnxruntime-web@1.30.0 WASM (one thread)",
+        "tokenizerLib": "@huggingface/tokenizers@0.2.0",
+        "sampler": "mulberry32 (production sampling.ts)",
+        "promptFormat": "buildPromptTokens (production prompt-format.ts), markers from tokenizer.ts",
+        "parser": "classifyToolCall (production parser.ts)",
+        "toolRegistry": "production tools/ allowlist-only",
+        "seed": 7,
+        "temperature": 0.7,
+        "topP": 0.9,
+        "maxNewTokens": 64,
+        "maxToolRounds": 0,
+        "inputTokens": 37
+      },
+      "systemPrompt": "You are an educational guide to Indian law. Explain basics in plain language. This is not legal advice.",
+      "toolSet": "",
+      "output": {
+        "rawTokenIds": [
+          510,
+          5396,
+          10350,
+          23632,
+          253,
+          987,
+          281,
+          1495,
+          285,
+          3367,
+          17843,
+          15
+        ],
+        "generatedCount": 12,
+        "visibleText": "The Indian Constitution guarantees the right to life and personal liberty.",
+        "stopReason": "end",
+        "elapsedMs": 2099,
+        "tokensPerSecond": 5.72
+      },
+      "toolExchange": null,
+      "review": {
+        "verdict": "approved",
+        "action": "adjusted",
+        "note": "reworded -> 'right to life and personal liberty' (fundamental rights in correct register)"
+      }
+    },
+    {
+      "schemaVersion": "qualification-v1",
+      "prompt": {
+        "id": "model07-v1-p4",
+        "text": "What does bail mean in India?",
+        "words": 6,
+        "binding": {
+          "tool": null,
+          "singleSchemaJson": null
+        }
+      },
+      "model": {
+        "id": "model07",
+        "presentedStage": "sft",
+        "mode": "chat"
+      },
+      "artifact": {
+        "path": "/home/rambala/work/taow/models/model07/sft.onnx",
+        "bytes": 478320686,
+        "sha256": "f3c9ba40a1a005acd5da0b59dfae85b6d9b23063ca8886ea472ed26eaadff0b3",
+        "stage": "sft",
+        "format": "onnx-fp32",
+        "contextLength": 1024
+      },
+      "tokenizer": {
+        "name": "neox",
+        "path": "/home/rambala/work/taow/data_pipeline/data/tokenizers/neox.json",
+        "bytes": 3567028,
+        "sha256": "3db27a94e0ea177379a5c427b62dbd00d1f4a73ec95c590c179b752619712856",
+        "validVocabSize": 50293,
+        "modelVocabSize": 50304,
+        "eosId": 0
+      },
+      "runner": {
+        "runner": "byom-demos-spike/qualify (production frozen modules bundled by esbuild)",
+        "engine": "onnxruntime-web@1.30.0 WASM (one thread)",
+        "tokenizerLib": "@huggingface/tokenizers@0.2.0",
+        "sampler": "mulberry32 (production sampling.ts)",
+        "promptFormat": "buildPromptTokens (production prompt-format.ts), markers from tokenizer.ts",
+        "parser": "classifyToolCall (production parser.ts)",
+        "toolRegistry": "production tools/ allowlist-only",
+        "seed": 7,
+        "temperature": 0.7,
+        "topP": 0.9,
+        "maxNewTokens": 64,
+        "maxToolRounds": 0,
+        "inputTokens": 35
+      },
+      "systemPrompt": "You are an educational guide to Indian law. Explain basics in plain language. This is not legal advice.",
+      "toolSet": "",
+      "output": {
+        "rawTokenIds": [
+          688,
+          5427,
+          13,
+          19590,
+          310,
+          417,
+          247,
+          1617,
+          19440,
+          323,
+          253,
+          5263,
+          273,
+          247,
+          1436,
+          665,
+          310,
+          417,
+          2708,
+          1283,
+          1107,
+          273,
+          2363,
+          15
+        ],
+        "generatedCount": 24,
+        "visibleText": "In India, bail is not a condition precedent for the arrest of a person who is not below 18 years of age.",
+        "stopReason": "end",
+        "elapsedMs": 4212,
+        "tokensPerSecond": 5.7
+      },
+      "toolExchange": null,
+      "review": {
+        "verdict": "approved",
+        "action": "adjusted",
+        "note": "reworded '...bail mean?' -> bail in India, short safe framing"
+      }
+    },
+    {
+      "schemaVersion": "qualification-v1",
+      "prompt": {
+        "id": "model07-v1-p5",
+        "text": "What is the right to freedom of speech?",
+        "words": 8,
+        "binding": {
+          "tool": null,
+          "singleSchemaJson": null
+        }
+      },
+      "model": {
+        "id": "model07",
+        "presentedStage": "sft",
+        "mode": "chat"
+      },
+      "artifact": {
+        "path": "/home/rambala/work/taow/models/model07/sft.onnx",
+        "bytes": 478320686,
+        "sha256": "f3c9ba40a1a005acd5da0b59dfae85b6d9b23063ca8886ea472ed26eaadff0b3",
+        "stage": "sft",
+        "format": "onnx-fp32",
+        "contextLength": 1024
+      },
+      "tokenizer": {
+        "name": "neox",
+        "path": "/home/rambala/work/taow/data_pipeline/data/tokenizers/neox.json",
+        "bytes": 3567028,
+        "sha256": "3db27a94e0ea177379a5c427b62dbd00d1f4a73ec95c590c179b752619712856",
+        "validVocabSize": 50293,
+        "modelVocabSize": 50304,
+        "eosId": 0
+      },
+      "runner": {
+        "runner": "byom-demos-spike/qualify (production frozen modules bundled by esbuild)",
+        "engine": "onnxruntime-web@1.30.0 WASM (one thread)",
+        "tokenizerLib": "@huggingface/tokenizers@0.2.0",
+        "sampler": "mulberry32 (production sampling.ts)",
+        "promptFormat": "buildPromptTokens (production prompt-format.ts), markers from tokenizer.ts",
+        "parser": "classifyToolCall (production parser.ts)",
+        "toolRegistry": "production tools/ allowlist-only",
+        "seed": 7,
+        "temperature": 0.7,
+        "topP": 0.9,
+        "maxNewTokens": 64,
+        "maxToolRounds": 0,
+        "inputTokens": 37
+      },
+      "systemPrompt": "You are an educational guide to Indian law. Explain basics in plain language. This is not legal advice.",
+      "toolSet": "",
+      "output": {
+        "rawTokenIds": [
+          510,
+          987,
+          281,
+          7185,
+          273,
+          6519,
+          310,
+          247,
+          987,
+          281,
+          7185,
+          273,
+          1869,
+          285,
+          2048,
+          15
+        ],
+        "generatedCount": 16,
+        "visibleText": "The right to freedom of speech is a right to freedom of thought and expression.",
+        "stopReason": "end",
+        "elapsedMs": 2772,
+        "tokensPerSecond": 5.77
+      },
+      "toolExchange": null,
+      "review": {
+        "verdict": "approved",
+        "action": "replaced",
+        "note": "untouchability article prompt only produced dodges; replaced with freedom-of-speech prompt -> clean answer"
+      }
+    }
+  ]
+}

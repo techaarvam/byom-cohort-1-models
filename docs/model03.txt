@@ -1,0 +1,5 @@
+Write a Python function that returns the square of a number.
+Write a Python function that checks if a number is even.
+Write a one-line Python expression that prints the numbers 1 to 5.
+Write a Python function greet(name) that prints "Hello, " followed by the name.
+Explain in one line what len([10, 20, 30]) returns.

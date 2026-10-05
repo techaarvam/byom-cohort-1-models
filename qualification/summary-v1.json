@@ -1,0 +1,75 @@
+{
+  "generatedAt": "2026-10-05T01:28:31.548Z",
+  "models": [
+    {
+      "model": "model04",
+      "mode": "chat",
+      "presentedStage": "sft",
+      "tokenizer": "starcoder",
+      "toolSet": "coder-v1",
+      "systemPrompt": "You are a helpful assistant with access to tools.",
+      "maxNewTokens": 64,
+      "seed": 7,
+      "artifactBytes": 473208878,
+      "artifactSha256": "9ad33d700f786a29057eeb23",
+      "approved": 5,
+      "adjusted": 5
+    },
+    {
+      "model": "model07",
+      "mode": "chat",
+      "presentedStage": "sft",
+      "tokenizer": "neox",
+      "toolSet": "",
+      "systemPrompt": "You are an educational guide to Indian law. Explain basics in plain language. This is not legal advice.",
+      "maxNewTokens": 64,
+      "seed": 7,
+      "artifactBytes": 478320686,
+      "artifactSha256": "f3c9ba40a1a005acd5da0b59",
+      "approved": 5,
+      "adjusted": 4
+    },
+    {
+      "model": "model10",
+      "mode": "chat",
+      "presentedStage": "toolcall",
+      "tokenizer": "neox",
+      "toolSet": "utilities-v1",
+      "systemPrompt": "You are a helpful assistant with access to tools.",
+      "maxNewTokens": 64,
+      "seed": 7,
+      "artifactBytes": 478320686,
+      "artifactSha256": "b32d92fe280edbdd94492091",
+      "approved": 5,
+      "adjusted": 1
+    },
+    {
+      "model": "model05",
+      "mode": "next-word",
+      "presentedStage": "pretrain",
+      "tokenizer": "tamil",
+      "toolSet": "",
+      "systemPrompt": "n/a (next-word)",
+      "maxNewTokens": 96,
+      "seed": 7,
+      "artifactBytes": 466819118,
+      "artifactSha256": "959ea47de94495b3b825bbbd",
+      "approved": 5,
+      "adjusted": 1
+    },
+    {
+      "model": "model06",
+      "mode": "next-word",
+      "presentedStage": "pretrain",
+      "tokenizer": "tamil",
+      "toolSet": "",
+      "systemPrompt": "n/a (next-word)",
+      "maxNewTokens": 96,
+      "seed": 7,
+      "artifactBytes": 466819118,
+      "artifactSha256": "5223de4a59ea2138202c518b",
+      "approved": 5,
+      "adjusted": 0
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+Write a JavaScript function that doubles a number.
+Write an SQL query to select the name and age columns from the table students.
+Write an HTML paragraph tag with the text "Hello, world".
+Write a Java method that adds two integers and returns the sum.
+Write a TypeScript function that returns the length of a string.

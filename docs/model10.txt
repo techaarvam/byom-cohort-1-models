@@ -1,0 +1,5 @@
+Please convert 100 USD to EUR.
+Convert 250 euros to US dollars.
+Calculate the discount on a price of 1500 with a discount_percentage of 20.
+Use calculate_tip with a bill of 800 and tip_percentage of 15.
+Use get_stock_price with the ticker TSLA.

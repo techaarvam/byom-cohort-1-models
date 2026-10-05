@@ -1,0 +1,98 @@
+{
+  "schemaVersion": "pending-models-v1",
+  "note": "Models 1, 2, 3, 8, 9 have NOT been collected on the GPU nodes. Their Tioga artifacts, stage selection via the production sampler, and prompt qualification are PENDING. The catalog (catalog-v1.json) authors their system prompt, mode (chat), five bindings, and frozen generation settings as candidates — status PENDING, stage null — so the catalog is complete for Agent 4 but nothing is approved or shipped.",
+  "models": [
+    {
+      "model": "model01",
+      "displayName": "Everyday English",
+      "mode": "chat",
+      "presentedStage": null,
+      "tokenizer": "neox",
+      "toolSet": "",
+      "systemPrompt": "You are a friendly English writing assistant. Answer briefly.",
+      "maxNewTokens": 64,
+      "maxToolRounds": 0,
+      "bindings": [
+        "Write a short, friendly email to thank a friend for their birthday gift.",
+        "Explain in one sentence why exercise is good for health.",
+        "Write a one-line morning greeting to your classmates.",
+        "What is the capital city of Japan? Answer in one short sentence.",
+        "Write a two-sentence summary of what bees do."
+      ]
+    },
+    {
+      "model": "model02",
+      "displayName": "Helpful Assistant",
+      "mode": "chat",
+      "presentedStage": null,
+      "tokenizer": "neox",
+      "toolSet": "utilities-v1",
+      "systemPrompt": "You are a helpful assistant. Give short, friendly answers; use a demo tool when asked.",
+      "maxNewTokens": 64,
+      "maxToolRounds": 1,
+      "toolPrompt": "Use the get_stock_price function to check the price of the ticker TCS.",
+      "bindings": [
+        "Give three ideas for a healthy breakfast, as a numbered list.",
+        "Write one sentence defining patience.",
+        "Recommend a fun hobby for a 60-year-old and say why in one sentence.",
+        "Write a polite two-line message to postpone a lunch meeting.",
+        "Use the get_stock_price function to check the price of the ticker TCS."
+      ]
+    },
+    {
+      "model": "model03",
+      "displayName": "Python Builder",
+      "mode": "chat",
+      "presentedStage": null,
+      "tokenizer": "starcoder",
+      "toolSet": "coder-v1",
+      "systemPrompt": "You are a Python coding assistant. Write short, correct Python code.",
+      "maxNewTokens": 64,
+      "maxToolRounds": 1,
+      "bindings": [
+        "Write a Python function that returns the square of a number.",
+        "Write a Python function that checks if a number is even.",
+        "Write a one-line Python expression that prints the numbers 1 to 5.",
+        "Write a Python function greet(name) that prints \"Hello, \" followed by the name.",
+        "Explain in one line what len([10, 20, 30]) returns."
+      ]
+    },
+    {
+      "model": "model08",
+      "displayName": "Math Solver",
+      "mode": "chat",
+      "presentedStage": null,
+      "tokenizer": "neox",
+      "toolSet": "utilities-v1",
+      "systemPrompt": "You are a math helper. Show brief, correct calculations.",
+      "maxNewTokens": 64,
+      "maxToolRounds": 1,
+      "toolPrompt": "Use the factorial function to compute 5!.",
+      "bindings": [
+        "What is 15% of 200?",
+        "Solve for x: 2x + 3 = 11. Give the answer and one step.",
+        "What is the sum of the first 10 natural numbers?",
+        "The area of a square is 49 square cm. What is the length of one side?",
+        "Use the factorial function to compute 5!."
+      ]
+    },
+    {
+      "model": "model09",
+      "displayName": "Science Explainer",
+      "mode": "chat",
+      "presentedStage": null,
+      "tokenizer": "neox",
+      "toolSet": "",
+      "systemPrompt": "You are a science explainer. Answer in short, clear language.",
+      "maxNewTokens": 64,
+      "maxToolRounds": 0,
+      "bindings": [
+        "Why does the sky appear blue? Answer in two sentences.",
+        "Explain in two sentences what plants need for photosynthesis.",
+        "What is the chemical symbol for water? Answer in one word.",
+        "Which planet is closest to the Sun? Answer in one sentence.",
+        "Explain in one sentence why a balloon filled with helium floats."
+      ]
+    }
+  ]
+}

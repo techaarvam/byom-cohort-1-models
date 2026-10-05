@@ -1,0 +1,5 @@
+What is 15% of 200?
+Solve for x: 2x + 3 = 11. Give the answer and one step.
+What is the sum of the first 10 natural numbers?
+The area of a square is 49 square cm. What is the length of one side?
+Use the factorial function to compute 5!.

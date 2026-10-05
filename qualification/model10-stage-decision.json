@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "stage-decision-v1",
+  "model": "model10",
+  "candidates": [
+    "toolcall",
+    "dpo"
+  ],
+  "decision": "toolcall",
+  "method": "Ran the 5 locked tool prompts against model10/toolcall.onnx and model10/dpo.onnx with the exact production config (single-schema injection, seed 7, temp 0.7, top-p 0.9, max 64, maxToolRounds 1, onnxruntime-web WASM).",
+  "evidence": {
+    "toolcall": {
+      "p1": "convert_currency {amount:100,from:USD,to:EUR} -> 92",
+      "p2": "convert_currency {amount:250,from:EUR,to:USD} -> clean round",
+      "p3": "calculate_discount {price:1500,discount_percentage:20} -> 300/1200",
+      "p4": "calculate_tip {bill:800,tip_percentage:15} -> 120/920",
+      "p5": "get_stock_price {ticker:TSLA} -> 244.6 USD simulated",
+      "verdict": "4/5 correct tool selection (p1-p5), all rounds complete with reason=end"
+    },
+    "dpo": {
+      "p1": "convert_currency {100 USD->EUR} ok",
+      "p2": "entered max-tool-rounds with malformed call {from:USD,to:US} (invalid 3-letter code) and generated 0 concluding tokens",
+      "p3": "calculate_discount ok",
+      "p4": "calculate_tip ok",
+      "p5": "get_stock_price ok",
+      "verdict": "4/5 rounds complete; p2 fails the round and yields an empty concluding turn"
+    }
+  },
+  "reason": "toolcall completes all five locked prompts with correct names and (after the p2 wording fix) correct arguments, ending cleanly. DPO's p2 breaks the one-tool-round rule (malformed 'US' code, zero-token conclusion). Tool selection on toolcall is also more reliable because the production catalog injects only the single required schema.",
+  "note": "This supersedes the earlier numpy-RNG stage sweep note; the production mulberry32/seed-7 result is authoritative. Not a claim that DPO is unusable globally — only that toolcall is the cleaner presentation stage for the locked prompt set."
+}

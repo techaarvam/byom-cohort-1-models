@@ -1,0 +1,349 @@
+{
+  "schemaVersion": "cohort-1-v1",
+  "manifestVersion": "cohort-1-v1",
+  "releaseTag": "cohort-1-v1",
+  "releaseBase": "https://github.com/techaarvam/byom-cohort-1-models/releases/download/cohort-1-v1",
+  "generatedAt": "2026-10-05T02:01:50.327Z",
+  "models": [
+    {
+      "promptSet": "model01-v1",
+      "modelNumber": 1,
+      "modelId": "model01",
+      "displayName": "Everyday English",
+      "status": "PENDING",
+      "mode": "chat",
+      "stage": null,
+      "tokenizerName": "neox",
+      "toolSet": "",
+      "parameterCount": 120000000,
+      "format": "onnx-fp32",
+      "onnxOpset": 20,
+      "contextLength": 1024,
+      "artifact": {
+        "url": "https://github.com/techaarvam/byom-cohort-1-models/releases/download/cohort-1-v1/model01-final-fp32.onnx",
+        "bytes": null,
+        "sha256": null
+      },
+      "tokenizer": {
+        "name": "neox",
+        "validVocabSize": 50293,
+        "modelVocabSize": 50304,
+        "eosId": 0,
+        "sha256": "3db27a94e0ea177379a5c427b62dbd00d1f4a73ec95c590c179b752619712856"
+      },
+      "generation": {
+        "temperature": 0.7,
+        "topP": 0.9,
+        "seed": 7,
+        "maxNewTokens": 64,
+        "maxToolRounds": 0
+      }
+    },
+    {
+      "promptSet": "model02-v1",
+      "modelNumber": 2,
+      "modelId": "model02",
+      "displayName": "Helpful Assistant",
+      "status": "PENDING",
+      "mode": "chat",
+      "stage": null,
+      "tokenizerName": "neox",
+      "toolSet": "utilities-v1",
+      "parameterCount": 120000000,
+      "format": "onnx-fp32",
+      "onnxOpset": 20,
+      "contextLength": 1024,
+      "artifact": {
+        "url": "https://github.com/techaarvam/byom-cohort-1-models/releases/download/cohort-1-v1/model02-final-fp32.onnx",
+        "bytes": null,
+        "sha256": null
+      },
+      "tokenizer": {
+        "name": "neox",
+        "validVocabSize": 50293,
+        "modelVocabSize": 50304,
+        "eosId": 0,
+        "sha256": "3db27a94e0ea177379a5c427b62dbd00d1f4a73ec95c590c179b752619712856"
+      },
+      "generation": {
+        "temperature": 0.7,
+        "topP": 0.9,
+        "seed": 7,
+        "maxNewTokens": 64,
+        "maxToolRounds": 1
+      }
+    },
+    {
+      "promptSet": "model03-v1",
+      "modelNumber": 3,
+      "modelId": "model03",
+      "displayName": "Python Builder",
+      "status": "PENDING",
+      "mode": "chat",
+      "stage": null,
+      "tokenizerName": "starcoder",
+      "toolSet": "coder-v1",
+      "parameterCount": 120000000,
+      "format": "onnx-fp32",
+      "onnxOpset": 20,
+      "contextLength": 1024,
+      "artifact": {
+        "url": "https://github.com/techaarvam/byom-cohort-1-models/releases/download/cohort-1-v1/model03-final-fp32.onnx",
+        "bytes": null,
+        "sha256": null
+      },
+      "tokenizer": {
+        "name": "starcoder",
+        "validVocabSize": 49168,
+        "modelVocabSize": 49280,
+        "eosId": 0,
+        "sha256": "9e1060d9a8d2d70d7c98b657e55affe7e76761639d8c5b165297c2b4474a355d"
+      },
+      "generation": {
+        "temperature": 0.7,
+        "topP": 0.9,
+        "seed": 7,
+        "maxNewTokens": 64,
+        "maxToolRounds": 1
+      }
+    },
+    {
+      "promptSet": "model04-v1",
+      "modelNumber": 4,
+      "modelId": "model04",
+      "displayName": "Polyglot Coder",
+      "status": "APPROVED",
+      "mode": "chat",
+      "stage": "sft",
+      "tokenizerName": "starcoder",
+      "toolSet": "coder-v1",
+      "parameterCount": 120000000,
+      "format": "onnx-fp32",
+      "onnxOpset": 20,
+      "contextLength": 1024,
+      "artifact": {
+        "url": "https://github.com/techaarvam/byom-cohort-1-models/releases/download/cohort-1-v1/model04-final-fp32.onnx",
+        "bytes": 473208878,
+        "sha256": "9ad33d700f786a29057eeb23bc9353c2016af3fad8018fbbcdad2d44103e5933"
+      },
+      "tokenizer": {
+        "name": "starcoder",
+        "validVocabSize": 49168,
+        "modelVocabSize": 49280,
+        "eosId": 0,
+        "sha256": "9e1060d9a8d2d70d7c98b657e55affe7e76761639d8c5b165297c2b4474a355d"
+      },
+      "generation": {
+        "temperature": 0.7,
+        "topP": 0.9,
+        "seed": 7,
+        "maxNewTokens": 64,
+        "maxToolRounds": 1
+      }
+    },
+    {
+      "promptSet": "model05-v1",
+      "modelNumber": 5,
+      "modelId": "model05",
+      "displayName": "Tamil + English",
+      "status": "APPROVED",
+      "mode": "next-word",
+      "stage": "pretrain",
+      "tokenizerName": "tamil",
+      "toolSet": "",
+      "parameterCount": 120000000,
+      "format": "onnx-fp32",
+      "onnxOpset": 20,
+      "contextLength": 1024,
+      "artifact": {
+        "url": "https://github.com/techaarvam/byom-cohort-1-models/releases/download/cohort-1-v1/model05-final-fp32.onnx",
+        "bytes": 466819118,
+        "sha256": "959ea47de94495b3b825bbbdf293db1e7489fb45e39b53e5a0e0c58535850339"
+      },
+      "tokenizer": {
+        "name": "tamil",
+        "validVocabSize": 47973,
+        "modelVocabSize": 48000,
+        "eosId": 2,
+        "sha256": "aac4192cafb1bc7cb8cd63d86c95b4d7a1a3318adef5b355c6b0e43870b57cde"
+      },
+      "generation": {
+        "temperature": 0.7,
+        "topP": 0.9,
+        "seed": 7,
+        "maxNewTokens": 96,
+        "maxToolRounds": 0
+      }
+    },
+    {
+      "promptSet": "model06-v1",
+      "modelNumber": 6,
+      "modelId": "model06",
+      "displayName": "Tamil Voice",
+      "status": "APPROVED",
+      "mode": "next-word",
+      "stage": "pretrain",
+      "tokenizerName": "tamil",
+      "toolSet": "",
+      "parameterCount": 120000000,
+      "format": "onnx-fp32",
+      "onnxOpset": 20,
+      "contextLength": 1024,
+      "artifact": {
+        "url": "https://github.com/techaarvam/byom-cohort-1-models/releases/download/cohort-1-v1/model06-final-fp32.onnx",
+        "bytes": 466819118,
+        "sha256": "5223de4a59ea2138202c518beff0b576b1b79e28f3f6a9a3744c9def36ed6ed3"
+      },
+      "tokenizer": {
+        "name": "tamil",
+        "validVocabSize": 47973,
+        "modelVocabSize": 48000,
+        "eosId": 2,
+        "sha256": "aac4192cafb1bc7cb8cd63d86c95b4d7a1a3318adef5b355c6b0e43870b57cde"
+      },
+      "generation": {
+        "temperature": 0.7,
+        "topP": 0.9,
+        "seed": 7,
+        "maxNewTokens": 96,
+        "maxToolRounds": 0
+      }
+    },
+    {
+      "promptSet": "model07-v1",
+      "modelNumber": 7,
+      "modelId": "model07",
+      "displayName": "Indian Law Guide",
+      "status": "APPROVED",
+      "mode": "chat",
+      "stage": "sft",
+      "tokenizerName": "neox",
+      "toolSet": "",
+      "parameterCount": 120000000,
+      "format": "onnx-fp32",
+      "onnxOpset": 20,
+      "contextLength": 1024,
+      "artifact": {
+        "url": "https://github.com/techaarvam/byom-cohort-1-models/releases/download/cohort-1-v1/model07-final-fp32.onnx",
+        "bytes": 478320686,
+        "sha256": "f3c9ba40a1a005acd5da0b59dfae85b6d9b23063ca8886ea472ed26eaadff0b3"
+      },
+      "tokenizer": {
+        "name": "neox",
+        "validVocabSize": 50293,
+        "modelVocabSize": 50304,
+        "eosId": 0,
+        "sha256": "3db27a94e0ea177379a5c427b62dbd00d1f4a73ec95c590c179b752619712856"
+      },
+      "generation": {
+        "temperature": 0.7,
+        "topP": 0.9,
+        "seed": 7,
+        "maxNewTokens": 64,
+        "maxToolRounds": 0
+      }
+    },
+    {
+      "promptSet": "model08-v1",
+      "modelNumber": 8,
+      "modelId": "model08",
+      "displayName": "Math Solver",
+      "status": "PENDING",
+      "mode": "chat",
+      "stage": null,
+      "tokenizerName": "neox",
+      "toolSet": "utilities-v1",
+      "parameterCount": 120000000,
+      "format": "onnx-fp32",
+      "onnxOpset": 20,
+      "contextLength": 1024,
+      "artifact": {
+        "url": "https://github.com/techaarvam/byom-cohort-1-models/releases/download/cohort-1-v1/model08-final-fp32.onnx",
+        "bytes": null,
+        "sha256": null
+      },
+      "tokenizer": {
+        "name": "neox",
+        "validVocabSize": 50293,
+        "modelVocabSize": 50304,
+        "eosId": 0,
+        "sha256": "3db27a94e0ea177379a5c427b62dbd00d1f4a73ec95c590c179b752619712856"
+      },
+      "generation": {
+        "temperature": 0.7,
+        "topP": 0.9,
+        "seed": 7,
+        "maxNewTokens": 64,
+        "maxToolRounds": 1
+      }
+    },
+    {
+      "promptSet": "model09-v1",
+      "modelNumber": 9,
+      "modelId": "model09",
+      "displayName": "Science Explainer",
+      "status": "PENDING",
+      "mode": "chat",
+      "stage": null,
+      "tokenizerName": "neox",
+      "toolSet": "",
+      "parameterCount": 120000000,
+      "format": "onnx-fp32",
+      "onnxOpset": 20,
+      "contextLength": 1024,
+      "artifact": {
+        "url": "https://github.com/techaarvam/byom-cohort-1-models/releases/download/cohort-1-v1/model09-final-fp32.onnx",
+        "bytes": null,
+        "sha256": null
+      },
+      "tokenizer": {
+        "name": "neox",
+        "validVocabSize": 50293,
+        "modelVocabSize": 50304,
+        "eosId": 0,
+        "sha256": "3db27a94e0ea177379a5c427b62dbd00d1f4a73ec95c590c179b752619712856"
+      },
+      "generation": {
+        "temperature": 0.7,
+        "topP": 0.9,
+        "seed": 7,
+        "maxNewTokens": 64,
+        "maxToolRounds": 0
+      }
+    },
+    {
+      "promptSet": "model10-v1",
+      "modelNumber": 10,
+      "modelId": "model10",
+      "displayName": "Tool Assistant",
+      "status": "APPROVED",
+      "mode": "chat",
+      "stage": "toolcall",
+      "tokenizerName": "neox",
+      "toolSet": "utilities-v1",
+      "parameterCount": 120000000,
+      "format": "onnx-fp32",
+      "onnxOpset": 20,
+      "contextLength": 1024,
+      "artifact": {
+        "url": "https://github.com/techaarvam/byom-cohort-1-models/releases/download/cohort-1-v1/model10-final-fp32.onnx",
+        "bytes": 478320686,
+        "sha256": "b32d92fe280edbdd944920917462380a924d3b9bdaffecf91670e2557c68de38"
+      },
+      "tokenizer": {
+        "name": "neox",
+        "validVocabSize": 50293,
+        "modelVocabSize": 50304,
+        "eosId": 0,
+        "sha256": "3db27a94e0ea177379a5c427b62dbd00d1f4a73ec95c590c179b752619712856"
+      },
+      "generation": {
+        "temperature": 0.7,
+        "topP": 0.9,
+        "seed": 7,
+        "maxNewTokens": 64,
+        "maxToolRounds": 1
+      }
+    }
+  ]
+}

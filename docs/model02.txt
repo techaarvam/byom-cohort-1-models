@@ -1,0 +1,5 @@
+Give three ideas for a healthy breakfast, as a numbered list.
+Write one sentence defining patience.
+Recommend a fun hobby for a 60-year-old and say why in one sentence.
+Write a polite two-line message to postpone a lunch meeting.
+Use the get_stock_price function to check the price of the ticker TCS.
