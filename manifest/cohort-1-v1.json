@@ -2,8 +2,8 @@
   "schemaVersion": "cohort-1-v1",
   "manifestVersion": "cohort-1-v1",
   "releaseTag": "cohort-1-v1",
-  "releaseBase": "https://github.com/techaarvam/byom-cohort-1-models/releases/download/cohort-1-v1",
-  "generatedAt": "2026-10-05T02:01:50.327Z",
+  "releaseBase": "https://storage.googleapis.com/techaarvam-byom-cohort-1-models/cohort-1-v1",
+  "generatedAt": "2026-10-05T02:27:35.397Z",
   "models": [
     {
       "promptSet": "model01-v1",
@@ -20,7 +20,7 @@
       "onnxOpset": 20,
       "contextLength": 1024,
       "artifact": {
-        "url": "https://github.com/techaarvam/byom-cohort-1-models/releases/download/cohort-1-v1/model01-final-fp32.onnx",
+        "url": "https://storage.googleapis.com/techaarvam-byom-cohort-1-models/cohort-1-v1/model01-final-fp32.onnx",
         "bytes": null,
         "sha256": null
       },
@@ -54,7 +54,7 @@
       "onnxOpset": 20,
       "contextLength": 1024,
       "artifact": {
-        "url": "https://github.com/techaarvam/byom-cohort-1-models/releases/download/cohort-1-v1/model02-final-fp32.onnx",
+        "url": "https://storage.googleapis.com/techaarvam-byom-cohort-1-models/cohort-1-v1/model02-final-fp32.onnx",
         "bytes": null,
         "sha256": null
       },
@@ -88,7 +88,7 @@
       "onnxOpset": 20,
       "contextLength": 1024,
       "artifact": {
-        "url": "https://github.com/techaarvam/byom-cohort-1-models/releases/download/cohort-1-v1/model03-final-fp32.onnx",
+        "url": "https://storage.googleapis.com/techaarvam-byom-cohort-1-models/cohort-1-v1/model03-final-fp32.onnx",
         "bytes": null,
         "sha256": null
       },
@@ -122,7 +122,7 @@
       "onnxOpset": 20,
       "contextLength": 1024,
       "artifact": {
-        "url": "https://github.com/techaarvam/byom-cohort-1-models/releases/download/cohort-1-v1/model04-final-fp32.onnx",
+        "url": "https://storage.googleapis.com/techaarvam-byom-cohort-1-models/cohort-1-v1/model04-final-fp32.onnx",
         "bytes": 473208878,
         "sha256": "9ad33d700f786a29057eeb23bc9353c2016af3fad8018fbbcdad2d44103e5933"
       },
@@ -156,7 +156,7 @@
       "onnxOpset": 20,
       "contextLength": 1024,
       "artifact": {
-        "url": "https://github.com/techaarvam/byom-cohort-1-models/releases/download/cohort-1-v1/model05-final-fp32.onnx",
+        "url": "https://storage.googleapis.com/techaarvam-byom-cohort-1-models/cohort-1-v1/model05-final-fp32.onnx",
         "bytes": 466819118,
         "sha256": "959ea47de94495b3b825bbbdf293db1e7489fb45e39b53e5a0e0c58535850339"
       },
@@ -190,7 +190,7 @@
       "onnxOpset": 20,
       "contextLength": 1024,
       "artifact": {
-        "url": "https://github.com/techaarvam/byom-cohort-1-models/releases/download/cohort-1-v1/model06-final-fp32.onnx",
+        "url": "https://storage.googleapis.com/techaarvam-byom-cohort-1-models/cohort-1-v1/model06-final-fp32.onnx",
         "bytes": 466819118,
         "sha256": "5223de4a59ea2138202c518beff0b576b1b79e28f3f6a9a3744c9def36ed6ed3"
       },
@@ -224,7 +224,7 @@
       "onnxOpset": 20,
       "contextLength": 1024,
       "artifact": {
-        "url": "https://github.com/techaarvam/byom-cohort-1-models/releases/download/cohort-1-v1/model07-final-fp32.onnx",
+        "url": "https://storage.googleapis.com/techaarvam-byom-cohort-1-models/cohort-1-v1/model07-final-fp32.onnx",
         "bytes": 478320686,
         "sha256": "f3c9ba40a1a005acd5da0b59dfae85b6d9b23063ca8886ea472ed26eaadff0b3"
       },
@@ -258,7 +258,7 @@
       "onnxOpset": 20,
       "contextLength": 1024,
       "artifact": {
-        "url": "https://github.com/techaarvam/byom-cohort-1-models/releases/download/cohort-1-v1/model08-final-fp32.onnx",
+        "url": "https://storage.googleapis.com/techaarvam-byom-cohort-1-models/cohort-1-v1/model08-final-fp32.onnx",
         "bytes": null,
         "sha256": null
       },
@@ -292,7 +292,7 @@
       "onnxOpset": 20,
       "contextLength": 1024,
       "artifact": {
-        "url": "https://github.com/techaarvam/byom-cohort-1-models/releases/download/cohort-1-v1/model09-final-fp32.onnx",
+        "url": "https://storage.googleapis.com/techaarvam-byom-cohort-1-models/cohort-1-v1/model09-final-fp32.onnx",
         "bytes": null,
         "sha256": null
       },
@@ -326,7 +326,7 @@
       "onnxOpset": 20,
       "contextLength": 1024,
       "artifact": {
-        "url": "https://github.com/techaarvam/byom-cohort-1-models/releases/download/cohort-1-v1/model10-final-fp32.onnx",
+        "url": "https://storage.googleapis.com/techaarvam-byom-cohort-1-models/cohort-1-v1/model10-final-fp32.onnx",
         "bytes": 478320686,
         "sha256": "b32d92fe280edbdd944920917462380a924d3b9bdaffecf91670e2557c68de38"
       },

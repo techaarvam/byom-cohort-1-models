@@ -38,8 +38,13 @@ settings (temperature 0.7, top-p 0.9, seed 7, per-model token cap), prompt-set
 ID, tool-set ID, and presentation mode/stage. The website loads this manifest
 and validates every digest before running a model.
 
-Release URLs are pinned to the immutable tag `cohort-1-v1`. The application
-never uses a mutable `latest` URL. Any change to a model, tokenizer, prompt
+Release URLs are pinned to the immutable tag `cohort-1-v1`; the GitHub
+repository is the canonical immutable archive. **Browser downloads** are
+served from a CORS-enabled Google Cloud Storage mirror (the GitHub Release
+CDN does not send `Access-Control-Allow-Origin`, so browsers cannot read the
+bytes directly from github.com):
+`https://storage.googleapis.com/techaarvam-byom-cohort-1-models/cohort-1-v1/{modelNN}-final-fp32.onnx`.
+The application never uses a mutable `latest` URL. Any change to a model, tokenizer, prompt
 setting, schema, or tool requires `cohort-1-v2` or later.
 
 ## Layout
