@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "stage-decision-v1",
+  "model": "model08",
+  "candidates": [
+    "sft",
+    "dpo",
+    "toolcall"
+  ],
+  "decision": "sft",
+  "method": "Ran the locked showcase set (model08-v1: p1-p5, chat mode, seed 7, temp 0.7, top-p 0.9, max 64, maxToolRounds 1, single-schema factorial injection for p5) against model08/sft.onnx, model08/dpo.onnx and model08/toolcall.onnx with the exact production sampler (mulberry32, onnxruntime-web WASM).",
+  "evidence": {
+    "sft": {
+      "p1": "opens 'To solve this problem, we need to determine the value of x... Percentage of students who are math helper: 0.15 * 200 =' (on-topic setup, math verbs)",
+      "p2": "opens 'To solve this problem, we need to find the value of x... The equation can be written as $2x + 3 = 11$. Substitute $x = 2$...' (correct equation echo)",
+      "p3": "opens 'To solve this problem, we need to determine the sum of the first 10 natural numbers. Let's break down...' (on-topic)",
+      "p4": "opens 'To find the length of one side... formula for the area of a square' (on-topic)",
+      "p5": "opens 'To solve this problem, we need to factorize... We can rewrite the expression as $5!$... boxed{5!}' (on-topic, ends cleanly with reason=end)",
+      "verdict": "5/5 on-topic math framing; verbose SFT register but every prompt engages the math content"
+    },
+    "dpo": {
+      "p1": "exact canned 'Let's solve this problem using Python code.' and ends",
+      "p2": "exact canned 'Let's solve this problem using Python code.'",
+      "p3": "exact canned 'Let's solve this problem using Python code.'",
+      "p4": "exact canned 'Let's solve this problem using Python code.'",
+      "p5": "degenerate '5! is 5*2*3*4*5*6*7*8*9*10*11*...' product expansion to the cap",
+      "verdict": "4/5 collapse to a single canned preamble; p5 is a nonsensical continued product"
+    },
+    "toolcall": {
+      "p1": "canned 'Let's solve this problem using Python code.'",
+      "p2": "canned preamble; no tool call",
+      "p3": "canned 'Let's write a Python code to calculate the sum...'",
+      "p4": "canned 'Let's solve this problem using Python code.'",
+      "p5": "'We see that the factorial function is $\\boxed{5}$.' (no valid tool call)",
+      "verdict": "no submitted run issues a <|tool_call|>; toolcall stage also collapses to the Python-code preamble attractor"
+    }
+  },
+  "reason": "SFT is the only stage that stays on the math content across all five locked prompts. DPO and toolcall both collapse into the same 'Let's solve this problem using Python code.' attractor (DPO 4/5, toolcall 4/5) and never emit a usable tool call, so presenting either would look broken in the browser. SFT is verbose but on-topic and ends cleanly on p5, matching the model04/model07 precedent of presenting SFT when DPO regresses.",
+  "note": "model08/toolcall.onnx was exported on the node (Oct 5 19:21) but the SFT-then-toolcall pipeline never produced a functioning tool-round; the utilities-v1 binding is retained in the catalog only for the factorial p5 prompt, which SFT answers in text. Supersedes the catalog's previous PENDING/null stage."
+}

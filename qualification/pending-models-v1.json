@@ -1,6 +1,6 @@
 {
   "schemaVersion": "pending-models-v1",
-  "note": "Models 1, 2, 3, 8, 9 have NOT been collected on the GPU nodes. Their Tioga artifacts, stage selection via the production sampler, and prompt qualification are PENDING. The catalog (catalog-v1.json) authors their system prompt, mode (chat), five bindings, and frozen generation settings as candidates — status PENDING, stage null — so the catalog is complete for Agent 4 but nothing is approved or shipped.",
+  "note": "Models 1, 2, 3 have NOT been collected on the GPU nodes. Models 4-10 are APPROVED; see summary-v1.json and the modelNN-v1-qualification.json records. The catalog (catalog-v1.json) authors their system prompt, mode (chat for 1/2/3), five bindings, and frozen generation settings as candidates \u2014 status PENDING, stage null \u2014 so the catalog is complete for Agent 4 but nothing is approved or shipped.",
   "models": [
     {
       "model": "model01",
@@ -55,43 +55,6 @@
         "Write a one-line Python expression that prints the numbers 1 to 5.",
         "Write a Python function greet(name) that prints \"Hello, \" followed by the name.",
         "Explain in one line what len([10, 20, 30]) returns."
-      ]
-    },
-    {
-      "model": "model08",
-      "displayName": "Math Solver",
-      "mode": "chat",
-      "presentedStage": null,
-      "tokenizer": "neox",
-      "toolSet": "utilities-v1",
-      "systemPrompt": "You are a math helper. Show brief, correct calculations.",
-      "maxNewTokens": 64,
-      "maxToolRounds": 1,
-      "toolPrompt": "Use the factorial function to compute 5!.",
-      "bindings": [
-        "What is 15% of 200?",
-        "Solve for x: 2x + 3 = 11. Give the answer and one step.",
-        "What is the sum of the first 10 natural numbers?",
-        "The area of a square is 49 square cm. What is the length of one side?",
-        "Use the factorial function to compute 5!."
-      ]
-    },
-    {
-      "model": "model09",
-      "displayName": "Science Explainer",
-      "mode": "chat",
-      "presentedStage": null,
-      "tokenizer": "neox",
-      "toolSet": "",
-      "systemPrompt": "You are a science explainer. Answer in short, clear language.",
-      "maxNewTokens": 64,
-      "maxToolRounds": 0,
-      "bindings": [
-        "Why does the sky appear blue? Answer in two sentences.",
-        "Explain in two sentences what plants need for photosynthesis.",
-        "What is the chemical symbol for water? Answer in one word.",
-        "Which planet is closest to the Sun? Answer in one sentence.",
-        "Explain in one sentence why a balloon filled with helium floats."
       ]
     }
   ]

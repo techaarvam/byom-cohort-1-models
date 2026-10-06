@@ -248,9 +248,9 @@
       "modelNumber": 8,
       "modelId": "model08",
       "displayName": "Math Solver",
-      "status": "PENDING",
+      "status": "APPROVED",
       "mode": "chat",
-      "stage": null,
+      "stage": "sft",
       "tokenizerName": "neox",
       "toolSet": "utilities-v1",
       "parameterCount": 120000000,
@@ -259,8 +259,8 @@
       "contextLength": 1024,
       "artifact": {
         "url": "https://storage.googleapis.com/techaarvam-byom-cohort-1-models/cohort-1-v1/model08-final-fp32.onnx",
-        "bytes": null,
-        "sha256": null
+        "bytes": 478320686,
+        "sha256": "bacb150211c5a533c14220758846898c065beec34e887aa685b108da2c213fdd"
       },
       "tokenizer": {
         "name": "neox",
@@ -282,9 +282,9 @@
       "modelNumber": 9,
       "modelId": "model09",
       "displayName": "Science Explainer",
-      "status": "PENDING",
-      "mode": "chat",
-      "stage": null,
+      "status": "APPROVED",
+      "mode": "next-word",
+      "stage": "pretrain",
       "tokenizerName": "neox",
       "toolSet": "",
       "parameterCount": 120000000,
@@ -293,8 +293,8 @@
       "contextLength": 1024,
       "artifact": {
         "url": "https://storage.googleapis.com/techaarvam-byom-cohort-1-models/cohort-1-v1/model09-final-fp32.onnx",
-        "bytes": null,
-        "sha256": null
+        "bytes": 478320686,
+        "sha256": "2b9e9608c2c015f6e78d975d2954c7f1bbd70e4a23b6743d5b34f5ec860904de"
       },
       "tokenizer": {
         "name": "neox",
@@ -307,7 +307,7 @@
         "temperature": 0.7,
         "topP": 0.9,
         "seed": 7,
-        "maxNewTokens": 64,
+        "maxNewTokens": 96,
         "maxToolRounds": 0
       }
     },

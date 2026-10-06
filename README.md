@@ -21,8 +21,8 @@ assumption, because DPO can degrade output for some models.
 | model05 Tamil + English | `pretrain` | next-word | `model05-final-fp32.onnx` |
 | model06 Tamil Voice | `pretrain` | next-word | `model06-final-fp32.onnx` |
 | model07 Indian Law Guide | `sft` | chat | `model07-final-fp32.onnx` |
-| model08 Math Solver | pending — final model in training | chat | — |
-| model09 Science Explainer | pending — final model in training | chat | — |
+| model08 Math Solver | `sft` | chat | `model08-final-fp32.onnx` |
+| model09 Science Explainer | `pretrain` | next-word | `model09-final-fp32.onnx` |
 | model10 Tool Assistant | `toolcall` | chat | `model10-final-fp32.onnx` |
 
 The two Tamil-Tamil models present their `pretrain` checkpoint in raw

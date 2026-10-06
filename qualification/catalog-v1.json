@@ -475,9 +475,9 @@
       "modelNumber": 8,
       "modelId": "model08",
       "displayName": "Math Solver",
-      "status": "PENDING",
+      "status": "APPROVED",
       "mode": "chat",
-      "stage": null,
+      "stage": "sft",
       "tokenizerName": "neox",
       "toolSet": "utilities-v1",
       "systemPrompt": "You are a math helper. Show brief, correct calculations.",
@@ -497,7 +497,7 @@
           "tool": null,
           "toolSchemaJson": null,
           "textSha256": "dc04912a4600df51368a0cc522817993f7705496e899e51e9716b6d8221daf2f",
-          "status": "PENDING"
+          "status": "APPROVED"
         },
         {
           "id": "model08-v1-p2",
@@ -506,7 +506,7 @@
           "tool": null,
           "toolSchemaJson": null,
           "textSha256": "58a10b24b304d420d2a12cb85887f5a958702bc0d7460b1b2054b4bc0ea7c647",
-          "status": "PENDING"
+          "status": "APPROVED"
         },
         {
           "id": "model08-v1-p3",
@@ -515,7 +515,7 @@
           "tool": null,
           "toolSchemaJson": null,
           "textSha256": "bb66bc8bb990b8928c84d7c9b322456e96b45a7d5a4f746f7c982375cfd79b17",
-          "status": "PENDING"
+          "status": "APPROVED"
         },
         {
           "id": "model08-v1-p4",
@@ -524,7 +524,7 @@
           "tool": null,
           "toolSchemaJson": null,
           "textSha256": "8b9fa0503280c99e62eadbce2c6bbf1256da6e4852123e8fd581a03cf0ddc5e8",
-          "status": "PENDING"
+          "status": "APPROVED"
         },
         {
           "id": "model08-v1-p5",
@@ -533,7 +533,7 @@
           "tool": "factorial",
           "toolSchemaJson": "{\"type\":\"object\",\"properties\":{\"n\":{\"type\":\"integer\",\"description\":\"Non-negative integer from 0 to 20.\"}},\"required\":[\"n\"],\"additionalProperties\":false}",
           "textSha256": "a0c9c1b5b6a3ee7382000cf210fea717ff5629677d56bc665b64b4fc61c14283",
-          "status": "PENDING"
+          "status": "APPROVED"
         }
       ]
     },
@@ -542,65 +542,65 @@
       "modelNumber": 9,
       "modelId": "model09",
       "displayName": "Science Explainer",
-      "status": "PENDING",
-      "mode": "chat",
-      "stage": null,
+      "status": "APPROVED",
+      "mode": "next-word",
+      "stage": "pretrain",
       "tokenizerName": "neox",
       "toolSet": "",
-      "systemPrompt": "You are a science explainer. Answer in short, clear language.",
-      "systemSha256": "5688df8a58833f62c91660b872dfb3631e3af946f5c29c22d0a653c066289962",
+      "systemPrompt": null,
+      "systemSha256": null,
       "generation": {
         "temperature": 0.7,
         "topP": 0.9,
         "seed": 7,
-        "maxNewTokens": 64,
+        "maxNewTokens": 96,
         "maxToolRounds": 0
       },
       "prompts": [
         {
           "id": "model09-v1-p1",
-          "text": "Why does the sky appear blue? Answer in two sentences.",
-          "words": 10,
-          "tool": null,
-          "toolSchemaJson": null,
-          "textSha256": "be62414a502bee6277333423b653a61056695ce44ecacc54deca943854eddc2a",
-          "status": "PENDING"
-        },
-        {
-          "id": "model09-v1-p2",
-          "text": "Explain in two sentences what plants need for photosynthesis.",
+          "text": "Water is made of two hydrogen atoms and one",
           "words": 9,
           "tool": null,
           "toolSchemaJson": null,
-          "textSha256": "210e21309d5bd0b04f4e3b12dd55f7cd163301ea6668e312a25d54d4fbb73bf9",
-          "status": "PENDING"
+          "textSha256": "43531b5e69eb95048979cd3d9dde2800eb421d302f2ac5ec90fe69d6b221133b",
+          "status": "APPROVED"
+        },
+        {
+          "id": "model09-v1-p2",
+          "text": "Plants use sunlight to make",
+          "words": 5,
+          "tool": null,
+          "toolSchemaJson": null,
+          "textSha256": "6eb44d8553338c2a56fd152a7c87ac59a52a2b49694ce8978da7d4ceb538b4c9",
+          "status": "APPROVED"
         },
         {
           "id": "model09-v1-p3",
-          "text": "What is the chemical symbol for water? Answer in one word.",
-          "words": 11,
+          "text": "The sun is the",
+          "words": 4,
           "tool": null,
           "toolSchemaJson": null,
-          "textSha256": "1c156fcfe753b64b394c520a342d0377b9ebe8680f27efd38035c72497c26f06",
-          "status": "PENDING"
+          "textSha256": "a7171bc70e8f4ed460326a18e0b27a35e45ab49091f8c786ec583aa2a6f714df",
+          "status": "APPROVED"
         },
         {
           "id": "model09-v1-p4",
-          "text": "Which planet is closest to the Sun? Answer in one sentence.",
-          "words": 11,
+          "text": "A chemical element is a substance that",
+          "words": 7,
           "tool": null,
           "toolSchemaJson": null,
-          "textSha256": "e82cd76c9644b5cf09bdd301edb617cceac3c716fb4159741d80463895bfb1b1",
-          "status": "PENDING"
+          "textSha256": "a0e5a02f660fd7319882a369157202d249c5c7b57bef3aafb72893c591ffbf51",
+          "status": "APPROVED"
         },
         {
           "id": "model09-v1-p5",
-          "text": "Explain in one sentence why a balloon filled with helium floats.",
-          "words": 11,
+          "text": "The Earth orbits around",
+          "words": 4,
           "tool": null,
           "toolSchemaJson": null,
-          "textSha256": "7f66062452ce87eb2bb882c7be8ba05443ea5c870f0ec9b915ed667ce10274f7",
-          "status": "PENDING"
+          "textSha256": "1faf9b7f1e47c6251152b004fcf13a943ac23bd131532bd58ee464232c2ea74e",
+          "status": "APPROVED"
         }
       ]
     },

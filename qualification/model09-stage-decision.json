@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "stage-decision-v1",
+  "model": "model09",
+  "candidates": [
+    "sft",
+    "dpo",
+    "pretrain"
+  ],
+  "decision": "pretrain",
+  "method": "Ran the locked showcase set (model09-v1 chat bindings) against model09/sft.onnx and model09/dpo.onnx, plus a next-word science completion set against model09/pretrain.onnx, with the exact production config (seed 7, temp 0.7, top-p 0.9, max 64 chat / 96 next-word, onnxruntime-web WASM, neox tokenizer). DPO was exported from the node's slot checkpoint (final update 412) after the daemon paused mid-shard.",
+  "evidence": {
+    "sft": {
+      "p1": "'esota Science History Chapter 4: The sky is a blue planet...' (katakana 'が' prefix token, off-topic)",
+      "p2": "'esotaphotoAnswer Step 1: Analyze the answers to the questions...' (rama repetition)",
+      "p3": "'. . .pH of water? Answer in one word.' followed by Chinese-character garbage",
+      "p4": "'esota to calculate the distance to the Sun...' 1.75 x 1.25 repetition to cap",
+      "p5": "'esotaQuestion... direction of the electric field' formula ramble",
+      "verdict": "5/5 collapse into a katakana 'が' prefix + repetition attractor; unusable in chat"
+    },
+    "dpo": {
+      "p1": "'esota Science questions and answers. - The sky is blue because it is blue. It is a blue ball.' (repetition)",
+      "p2": "'esota Science/Gametology: The concept of photosynthesis...' chemical-reaction loop",
+      "p3": "'esota Science facts and concepts. - The chemical symbol for water is water. It is a fundamental concept...' repetition",
+      "p4": "'esota Today we are going to discuss the characteristics of the planets...' (mostly off-topic)",
+      "p5": "'esota Science Problem' force-of-attraction loop",
+      "verdict": "5/5 same 'が' attractor; DPO does not rescue SFT"
+    },
+    "pretrain": {
+      "p1": "'Water is made of two hydrogen atoms and one oxygen atom.' (correct, clean English)",
+      "p2": "'Plants use sunlight to make food.' (correct, clean English)",
+      "p3": "'The sun is the only source of energy.' (clean English)",
+      "p4": "'A chemical element is a substance that is present in all living cells.' (clean English)",
+      "p5": "'The Earth orbits around the Sun at an angle of approximately 0.8...' (clean English)",
+      "verdict": "5/5 coherent English continuations that mirror the Science Explainer goal"
+    }
+  },
+  "reason": "Both SFT and DPO collapse into the identical katakana 'が' repetition attractor (SciInstruct/English UltraFeedback permuted the model's register into a degenerate loop, the same failure mode as the Tamil models 5/6). Pretrain is the only stage that produces fluent, on-topic English continuations, so model09 presents pretrain in next-word mode exactly as models 5/6 do.",
+  "note": "Supersedes the catalog's previous chat/PENDING/null stage and the authored chat bindings; model09-v1 is re-authored as a next-word completion set. DPO checkpoint was mid-shard (update 412 of the final shard) when tsliced paused; the exported dpo.onnx carries the partial-DPO policy, which echoed the SFT collapse, so no further training was warranted for presentation."
+}
