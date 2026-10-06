@@ -138,7 +138,7 @@
    "prompt": {
     "id": "p2",
     "text": "Solve for x: 2x + 3 = 11. Give the answer and one step.",
-    "words": 14,
+    "words": 12,
     "binding": {
      "tool": null,
      "singleSchemaJson": null
