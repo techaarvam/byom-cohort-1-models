@@ -1,680 +1,680 @@
 {
-  "schemaVersion": "catalog-v1",
-  "catalog": [
+ "schemaVersion": "catalog-v1",
+ "catalog": [
+  {
+   "promptSet": "model01-v1",
+   "modelNumber": 1,
+   "modelId": "model01",
+   "displayName": "Everyday English",
+   "status": "APPROVED",
+   "mode": "chat",
+   "stage": "sft",
+   "tokenizerName": "neox",
+   "toolSet": "",
+   "systemPrompt": "You are a friendly English writing assistant. Answer briefly.",
+   "systemSha256": "457706485e68225f9633ea46f1fba6f9eecb3c49a90defd1f762e71e4dde9915",
+   "generation": {
+    "temperature": 0.7,
+    "topP": 0.9,
+    "seed": 7,
+    "maxNewTokens": 96,
+    "maxToolRounds": 0
+   },
+   "prompts": [
     {
-      "promptSet": "model01-v1",
-      "modelNumber": 1,
-      "modelId": "model01",
-      "displayName": "Everyday English",
-      "status": "PENDING",
-      "mode": "chat",
-      "stage": null,
-      "tokenizerName": "neox",
-      "toolSet": "",
-      "systemPrompt": "You are a friendly English writing assistant. Answer briefly.",
-      "systemSha256": "457706485e68225f9633ea46f1fba6f9eecb3c49a90defd1f762e71e4dde9915",
-      "generation": {
-        "temperature": 0.7,
-        "topP": 0.9,
-        "seed": 7,
-        "maxNewTokens": 64,
-        "maxToolRounds": 0
-      },
-      "prompts": [
-        {
-          "id": "model01-v1-p1",
-          "text": "Write a short, friendly email to thank a friend for their birthday gift.",
-          "words": 13,
-          "tool": null,
-          "toolSchemaJson": null,
-          "textSha256": "0fde4e96afcde695cbfc9ce7f7048b65a784be5a38be001979435af37090b128",
-          "status": "PENDING"
-        },
-        {
-          "id": "model01-v1-p2",
-          "text": "Explain in one sentence why exercise is good for health.",
-          "words": 10,
-          "tool": null,
-          "toolSchemaJson": null,
-          "textSha256": "4e54564ee5cda26f2af5930c93d0a9f40fad31d0babc6dfdd3ba4247c49d5aa8",
-          "status": "PENDING"
-        },
-        {
-          "id": "model01-v1-p3",
-          "text": "Write a one-line morning greeting to your classmates.",
-          "words": 9,
-          "tool": null,
-          "toolSchemaJson": null,
-          "textSha256": "130240319c2381aa49a48cdd50c77a390a2d3c5d6cd39093e93476e7f8b29e61",
-          "status": "PENDING"
-        },
-        {
-          "id": "model01-v1-p4",
-          "text": "What is the capital city of Japan? Answer in one short sentence.",
-          "words": 12,
-          "tool": null,
-          "toolSchemaJson": null,
-          "textSha256": "7fa56a0f41b721e2fbc1dc7d84713b52412c75d70e1388f047fadde176a5df0e",
-          "status": "PENDING"
-        },
-        {
-          "id": "model01-v1-p5",
-          "text": "Write a two-sentence summary of what bees do.",
-          "words": 9,
-          "tool": null,
-          "toolSchemaJson": null,
-          "textSha256": "0ee6de1e86096c751b82fe6166db785677d8ff1de79d833cfcf5ac3343de3fe7",
-          "status": "PENDING"
-        }
-      ]
+     "id": "model01-v1-p1",
+     "text": "Write a short, friendly email to thank a friend for their birthday gift.",
+     "words": 13,
+     "tool": null,
+     "toolSchemaJson": null,
+     "textSha256": "0fde4e96afcde695cbfc9ce7f7048b65a784be5a38be001979435af37090b128",
+     "status": "APPROVED"
     },
     {
-      "promptSet": "model02-v1",
-      "modelNumber": 2,
-      "modelId": "model02",
-      "displayName": "Helpful Assistant",
-      "status": "PENDING",
-      "mode": "chat",
-      "stage": null,
-      "tokenizerName": "neox",
-      "toolSet": "utilities-v1",
-      "systemPrompt": "You are a helpful assistant. Give short, friendly answers; use a demo tool when asked.",
-      "systemSha256": "45b488b4b4c46cabaeaa356422181fcf3b2ffb7d8cab25ef29886f4e68fdf0f6",
-      "generation": {
-        "temperature": 0.7,
-        "topP": 0.9,
-        "seed": 7,
-        "maxNewTokens": 64,
-        "maxToolRounds": 1
-      },
-      "prompts": [
-        {
-          "id": "model02-v1-p1",
-          "text": "Give three ideas for a healthy breakfast, as a numbered list.",
-          "words": 11,
-          "tool": null,
-          "toolSchemaJson": null,
-          "textSha256": "e7d68aaaf839b3d55897fe51a35d260938eaba41740f79cc6e4b9381004e2194",
-          "status": "PENDING"
-        },
-        {
-          "id": "model02-v1-p2",
-          "text": "Write one sentence defining patience.",
-          "words": 5,
-          "tool": null,
-          "toolSchemaJson": null,
-          "textSha256": "30932d7218e782dd3f9f80ba28b440d7d729071cd01f5697d85b8fa4daa28bb0",
-          "status": "PENDING"
-        },
-        {
-          "id": "model02-v1-p3",
-          "text": "Recommend a fun hobby for a 60-year-old and say why in one sentence.",
-          "words": 15,
-          "tool": null,
-          "toolSchemaJson": null,
-          "textSha256": "a5d25cff26778713702dcffdc35792448cdf42df13b02601182addb8e7882f3c",
-          "status": "PENDING"
-        },
-        {
-          "id": "model02-v1-p4",
-          "text": "Write a polite two-line message to postpone a lunch meeting.",
-          "words": 11,
-          "tool": null,
-          "toolSchemaJson": null,
-          "textSha256": "ed7f2f1c281f9eee0c584ded14819ca3a09db4ff58568968d83f2f6d602c4753",
-          "status": "PENDING"
-        },
-        {
-          "id": "model02-v1-p5",
-          "text": "Use the get_stock_price function to check the price of the ticker TCS.",
-          "words": 12,
-          "tool": "get_stock_price",
-          "toolSchemaJson": "{\"type\":\"object\",\"properties\":{\"ticker\":{\"type\":\"string\",\"description\":\"Stock ticker symbol, e.g. TCS or TSLA.\"}},\"required\":[\"ticker\"],\"additionalProperties\":false}",
-          "textSha256": "1a031267a6daaef1bbd6f517723407dd4a6346c689c49c296419e3f254da35d3",
-          "status": "PENDING"
-        }
-      ]
+     "id": "model01-v1-p2",
+     "text": "Explain in one sentence why exercise is good for health.",
+     "words": 10,
+     "tool": null,
+     "toolSchemaJson": null,
+     "textSha256": "4e54564ee5cda26f2af5930c93d0a9f40fad31d0babc6dfdd3ba4247c49d5aa8",
+     "status": "APPROVED"
     },
     {
-      "promptSet": "model03-v1",
-      "modelNumber": 3,
-      "modelId": "model03",
-      "displayName": "Python Builder",
-      "status": "PENDING",
-      "mode": "chat",
-      "stage": null,
-      "tokenizerName": "starcoder",
-      "toolSet": "coder-v1",
-      "systemPrompt": "You are a Python coding assistant. Write short, correct Python code.",
-      "systemSha256": "3bfe7b68363bfdddc23883368e0002ac4d1da05afcc343342ce06ceabad4271a",
-      "generation": {
-        "temperature": 0.7,
-        "topP": 0.9,
-        "seed": 7,
-        "maxNewTokens": 64,
-        "maxToolRounds": 1
-      },
-      "prompts": [
-        {
-          "id": "model03-v1-p1",
-          "text": "Write a Python function that returns the square of a number.",
-          "words": 11,
-          "tool": null,
-          "toolSchemaJson": null,
-          "textSha256": "d36e40178d9face8528ab9d56a164e9d50885ed225ab90a47945910082d1c8a3",
-          "status": "PENDING"
-        },
-        {
-          "id": "model03-v1-p2",
-          "text": "Write a Python function that checks if a number is even.",
-          "words": 11,
-          "tool": null,
-          "toolSchemaJson": null,
-          "textSha256": "d72119e467c4f4f0962adfa6212e050bdfc9a57787d9ce94e71707883397f87b",
-          "status": "PENDING"
-        },
-        {
-          "id": "model03-v1-p3",
-          "text": "Write a one-line Python expression that prints the numbers 1 to 5.",
-          "words": 13,
-          "tool": null,
-          "toolSchemaJson": null,
-          "textSha256": "1cd55dcede0a8985fd0a14521a6abb7319e6ea01c2fb37310b7c8a80f163c9a7",
-          "status": "PENDING"
-        },
-        {
-          "id": "model03-v1-p4",
-          "text": "Write a Python function greet(name) that prints \"Hello, \" followed by the name.",
-          "words": 13,
-          "tool": null,
-          "toolSchemaJson": null,
-          "textSha256": "dfbdd21ecbce4c0625515bdb4ed1e1771927846bf2b34ae5272a0949692fcc5d",
-          "status": "PENDING"
-        },
-        {
-          "id": "model03-v1-p5",
-          "text": "Explain in one line what len([10, 20, 30]) returns.",
-          "words": 10,
-          "tool": null,
-          "toolSchemaJson": null,
-          "textSha256": "5ea2f456651ee1957ead76688986669e57237023f530ef1b354bfa25edfa9b89",
-          "status": "PENDING"
-        }
-      ]
+     "id": "model01-v1-p3",
+     "text": "Write a one-line morning greeting to your classmates.",
+     "words": 9,
+     "tool": null,
+     "toolSchemaJson": null,
+     "textSha256": "130240319c2381aa49a48cdd50c77a390a2d3c5d6cd39093e93476e7f8b29e61",
+     "status": "APPROVED"
     },
     {
-      "promptSet": "model04-v1",
-      "modelNumber": 4,
-      "modelId": "model04",
-      "displayName": "Polyglot Coder",
-      "status": "APPROVED",
-      "mode": "chat",
-      "stage": "sft",
-      "tokenizerName": "starcoder",
-      "toolSet": "coder-v1",
-      "systemPrompt": "You are a helpful assistant with access to tools.",
-      "systemSha256": "a05a069d0e606fd90ee580abb1d9b64b7cf34a4ea303f2019ba2a8cb1b74ed12",
-      "generation": {
-        "temperature": 0.7,
-        "topP": 0.9,
-        "seed": 7,
-        "maxNewTokens": 64,
-        "maxToolRounds": 1
-      },
-      "prompts": [
-        {
-          "id": "model04-v1-p1",
-          "text": "Write a JavaScript function named double that returns twice a number.",
-          "words": 11,
-          "tool": null,
-          "toolSchemaJson": null,
-          "textSha256": "d9326c4de87b1c33e84b73527f54330b745e99ca5bff8e62f7c4a44c1c14264f",
-          "status": "APPROVED"
-        },
-        {
-          "id": "model04-v1-p2",
-          "text": "Write an SQL query that selects the name and age columns from the table students.",
-          "words": 15,
-          "tool": null,
-          "toolSchemaJson": null,
-          "textSha256": "bcfdf5ed76a6b3f866bae96a374059d25803cc156ce16e7c5fb6e3ae39628b06",
-          "status": "APPROVED"
-        },
-        {
-          "id": "model04-v1-p3",
-          "text": "Write an HTML paragraph containing the text \"Hello, world\".",
-          "words": 9,
-          "tool": null,
-          "toolSchemaJson": null,
-          "textSha256": "366fe843300028c6b09ba56239ee5706d46ccbfcc4be2a5ba41f6e594e7122b1",
-          "status": "APPROVED"
-        },
-        {
-          "id": "model04-v1-p4",
-          "text": "Write a Java method that adds two integers and returns their sum.",
-          "words": 12,
-          "tool": null,
-          "toolSchemaJson": null,
-          "textSha256": "da0f0e35f507f51036c436c42f425831a195d8c7e0ad14e69549c71b7fe80cf8",
-          "status": "APPROVED"
-        },
-        {
-          "id": "model04-v1-p5",
-          "text": "Write a TypeScript function that returns the length of a given string.",
-          "words": 12,
-          "tool": null,
-          "toolSchemaJson": null,
-          "textSha256": "3421bfd2c391981cefefd3338492ad95ed7ee309f15720f6a78394ce3a7e2fb2",
-          "status": "APPROVED"
-        }
-      ]
+     "id": "model01-v1-p4",
+     "text": "What is the capital city of Japan? Answer in one short sentence.",
+     "words": 12,
+     "tool": null,
+     "toolSchemaJson": null,
+     "textSha256": "7fa56a0f41b721e2fbc1dc7d84713b52412c75d70e1388f047fadde176a5df0e",
+     "status": "APPROVED"
     },
     {
-      "promptSet": "model05-v1",
-      "modelNumber": 5,
-      "modelId": "model05",
-      "displayName": "Tamil + English",
-      "status": "APPROVED",
-      "mode": "next-word",
-      "stage": "pretrain",
-      "tokenizerName": "tamil",
-      "toolSet": "",
-      "systemPrompt": null,
-      "systemSha256": null,
-      "generation": {
-        "temperature": 0.7,
-        "topP": 0.9,
-        "seed": 7,
-        "maxNewTokens": 96,
-        "maxToolRounds": 0
-      },
-      "prompts": [
-        {
-          "id": "model05-v1-p1",
-          "text": "சென்னை மாநகரில் நேற்று",
-          "words": 3,
-          "tool": null,
-          "toolSchemaJson": null,
-          "textSha256": "64a9a9db4ebeb2c30eee440ab2d9d90d7a9599b7fe23962192089be83c50aa56",
-          "status": "APPROVED"
-        },
-        {
-          "id": "model05-v1-p2",
-          "text": "ஊரில் உள்ள கோவிலில்",
-          "words": 3,
-          "tool": null,
-          "toolSchemaJson": null,
-          "textSha256": "013d13a5e179efb30d8d10033d3195f20696b9143440d86e86fe418fa303cdf1",
-          "status": "APPROVED"
-        },
-        {
-          "id": "model05-v1-p3",
-          "text": "மேட்டூர் அணையில் இருந்து",
-          "words": 3,
-          "tool": null,
-          "toolSchemaJson": null,
-          "textSha256": "8c0f8f82cf3267aa6e76996bdcfec719db8cce5a89a1bdd31c978c6212c6dab9",
-          "status": "APPROVED"
-        },
-        {
-          "id": "model05-v1-p4",
-          "text": "தமிழகத்தில்",
-          "words": 1,
-          "tool": null,
-          "toolSchemaJson": null,
-          "textSha256": "41d0474ae94f1e7074af3ea18ccd2be792a7354d96cc9513563d054d0afa9af0",
-          "status": "APPROVED"
-        },
-        {
-          "id": "model05-v1-p5",
-          "text": "தமிழகத்தில் நேற்று பெய்த மழையில்",
-          "words": 4,
-          "tool": null,
-          "toolSchemaJson": null,
-          "textSha256": "4be55881a96c043c18c4eb9da714456d2c45f117ce26a70c9ac93915b2058aff",
-          "status": "APPROVED"
-        }
-      ]
-    },
-    {
-      "promptSet": "model06-v1",
-      "modelNumber": 6,
-      "modelId": "model06",
-      "displayName": "Tamil Voice",
-      "status": "APPROVED",
-      "mode": "next-word",
-      "stage": "pretrain",
-      "tokenizerName": "tamil",
-      "toolSet": "",
-      "systemPrompt": null,
-      "systemSha256": null,
-      "generation": {
-        "temperature": 0.7,
-        "topP": 0.9,
-        "seed": 7,
-        "maxNewTokens": 96,
-        "maxToolRounds": 0
-      },
-      "prompts": [
-        {
-          "id": "model06-v1-p1",
-          "text": "சென்னையில் பலத்த மழை பெய்தது",
-          "words": 4,
-          "tool": null,
-          "toolSchemaJson": null,
-          "textSha256": "5654431e9e2ae0a931bacfb189234671d14bddf4b21699085d28fef33e829075",
-          "status": "APPROVED"
-        },
-        {
-          "id": "model06-v1-p2",
-          "text": "மேட்டூர் அணையில் இருந்து",
-          "words": 3,
-          "tool": null,
-          "toolSchemaJson": null,
-          "textSha256": "8c0f8f82cf3267aa6e76996bdcfec719db8cce5a89a1bdd31c978c6212c6dab9",
-          "status": "APPROVED"
-        },
-        {
-          "id": "model06-v1-p3",
-          "text": "சென்னை மாநகரில் நேற்று",
-          "words": 3,
-          "tool": null,
-          "toolSchemaJson": null,
-          "textSha256": "64a9a9db4ebeb2c30eee440ab2d9d90d7a9599b7fe23962192089be83c50aa56",
-          "status": "APPROVED"
-        },
-        {
-          "id": "model06-v1-p4",
-          "text": "ஊரில் உள்ள கோவிலில்",
-          "words": 3,
-          "tool": null,
-          "toolSchemaJson": null,
-          "textSha256": "013d13a5e179efb30d8d10033d3195f20696b9143440d86e86fe418fa303cdf1",
-          "status": "APPROVED"
-        },
-        {
-          "id": "model06-v1-p5",
-          "text": "சென்னை வானிலை ஆய்வு மையம்,",
-          "words": 4,
-          "tool": null,
-          "toolSchemaJson": null,
-          "textSha256": "14e7ce3e20d338d1c3a2c99d189e2af68db1f9fb2faf3e54a3bd508df5d6373b",
-          "status": "APPROVED"
-        }
-      ]
-    },
-    {
-      "promptSet": "model07-v1",
-      "modelNumber": 7,
-      "modelId": "model07",
-      "displayName": "Indian Law Guide",
-      "status": "APPROVED",
-      "mode": "chat",
-      "stage": "sft",
-      "tokenizerName": "neox",
-      "toolSet": "",
-      "systemPrompt": "You are an educational guide to Indian law. Explain basics in plain language. This is not legal advice.",
-      "systemSha256": "80733954067225dfe3113530fe027355b1320d9dac7b9ca34c266e439995ff44",
-      "generation": {
-        "temperature": 0.7,
-        "topP": 0.9,
-        "seed": 7,
-        "maxNewTokens": 64,
-        "maxToolRounds": 0
-      },
-      "prompts": [
-        {
-          "id": "model07-v1-p1",
-          "text": "What does Article 21 of the Indian Constitution guarantee? Answer in two sentences.",
-          "words": 13,
-          "tool": null,
-          "toolSchemaJson": null,
-          "textSha256": "e0596d181d535a4ae26032bcf7cba4899d85923615d9aff6b5a195622aa035af",
-          "status": "APPROVED"
-        },
-        {
-          "id": "model07-v1-p2",
-          "text": "What is a First Information Report?",
-          "words": 6,
-          "tool": null,
-          "toolSchemaJson": null,
-          "textSha256": "41a97ea715590843be2793268039cbea6d257bade9c80adafa6ec800e929312b",
-          "status": "APPROVED"
-        },
-        {
-          "id": "model07-v1-p3",
-          "text": "List two fundamental rights from the Indian Constitution.",
-          "words": 8,
-          "tool": null,
-          "toolSchemaJson": null,
-          "textSha256": "305e091be0e5bb7994f29487d01c8b9f984fe36b9e618dd082a1171a78b53e6d",
-          "status": "APPROVED"
-        },
-        {
-          "id": "model07-v1-p4",
-          "text": "What does bail mean in India?",
-          "words": 6,
-          "tool": null,
-          "toolSchemaJson": null,
-          "textSha256": "6db6747e4b9c604507c9637e639b6d1fe05c8d2cccce0f073a9a70b5038f59e0",
-          "status": "APPROVED"
-        },
-        {
-          "id": "model07-v1-p5",
-          "text": "What is the right to freedom of speech?",
-          "words": 8,
-          "tool": null,
-          "toolSchemaJson": null,
-          "textSha256": "4f79853c5ae7afe4541820c2e03b40b1831fab1c300baf82e6e95fb61a02f674",
-          "status": "APPROVED"
-        }
-      ]
-    },
-    {
-      "promptSet": "model08-v1",
-      "modelNumber": 8,
-      "modelId": "model08",
-      "displayName": "Math Solver",
-      "status": "APPROVED",
-      "mode": "chat",
-      "stage": "sft",
-      "tokenizerName": "neox",
-      "toolSet": "utilities-v1",
-      "systemPrompt": "You are a math helper. Show brief, correct calculations.",
-      "systemSha256": "0594c507eca5255b297920810267de4eecdd7eee2586ca653e602426306c7927",
-      "generation": {
-        "temperature": 0.7,
-        "topP": 0.9,
-        "seed": 7,
-        "maxNewTokens": 64,
-        "maxToolRounds": 1
-      },
-      "prompts": [
-        {
-          "id": "model08-v1-p1",
-          "text": "What is 15% of 200?",
-          "words": 5,
-          "tool": null,
-          "toolSchemaJson": null,
-          "textSha256": "dc04912a4600df51368a0cc522817993f7705496e899e51e9716b6d8221daf2f",
-          "status": "APPROVED"
-        },
-        {
-          "id": "model08-v1-p2",
-          "text": "Solve for x: 2x + 3 = 11. Give the answer and one step.",
-          "words": 12,
-          "tool": null,
-          "toolSchemaJson": null,
-          "textSha256": "58a10b24b304d420d2a12cb85887f5a958702bc0d7460b1b2054b4bc0ea7c647",
-          "status": "APPROVED"
-        },
-        {
-          "id": "model08-v1-p3",
-          "text": "What is the sum of the first 10 natural numbers?",
-          "words": 10,
-          "tool": null,
-          "toolSchemaJson": null,
-          "textSha256": "bb66bc8bb990b8928c84d7c9b322456e96b45a7d5a4f746f7c982375cfd79b17",
-          "status": "APPROVED"
-        },
-        {
-          "id": "model08-v1-p4",
-          "text": "The area of a square is 49 square cm. What is the length of one side?",
-          "words": 16,
-          "tool": null,
-          "toolSchemaJson": null,
-          "textSha256": "8b9fa0503280c99e62eadbce2c6bbf1256da6e4852123e8fd581a03cf0ddc5e8",
-          "status": "APPROVED"
-        },
-        {
-          "id": "model08-v1-p5",
-          "text": "Use the factorial function to compute 5!.",
-          "words": 7,
-          "tool": "factorial",
-          "toolSchemaJson": "{\"type\":\"object\",\"properties\":{\"n\":{\"type\":\"integer\",\"description\":\"Non-negative integer from 0 to 20.\"}},\"required\":[\"n\"],\"additionalProperties\":false}",
-          "textSha256": "a0c9c1b5b6a3ee7382000cf210fea717ff5629677d56bc665b64b4fc61c14283",
-          "status": "APPROVED"
-        }
-      ]
-    },
-    {
-      "promptSet": "model09-v1",
-      "modelNumber": 9,
-      "modelId": "model09",
-      "displayName": "Science Explainer",
-      "status": "APPROVED",
-      "mode": "next-word",
-      "stage": "pretrain",
-      "tokenizerName": "neox",
-      "toolSet": "",
-      "systemPrompt": null,
-      "systemSha256": null,
-      "generation": {
-        "temperature": 0.7,
-        "topP": 0.9,
-        "seed": 7,
-        "maxNewTokens": 96,
-        "maxToolRounds": 0
-      },
-      "prompts": [
-        {
-          "id": "model09-v1-p1",
-          "text": "Water is made of two hydrogen atoms and one",
-          "words": 9,
-          "tool": null,
-          "toolSchemaJson": null,
-          "textSha256": "43531b5e69eb95048979cd3d9dde2800eb421d302f2ac5ec90fe69d6b221133b",
-          "status": "APPROVED"
-        },
-        {
-          "id": "model09-v1-p2",
-          "text": "Plants use sunlight to make",
-          "words": 5,
-          "tool": null,
-          "toolSchemaJson": null,
-          "textSha256": "6eb44d8553338c2a56fd152a7c87ac59a52a2b49694ce8978da7d4ceb538b4c9",
-          "status": "APPROVED"
-        },
-        {
-          "id": "model09-v1-p3",
-          "text": "The sun is the",
-          "words": 4,
-          "tool": null,
-          "toolSchemaJson": null,
-          "textSha256": "a7171bc70e8f4ed460326a18e0b27a35e45ab49091f8c786ec583aa2a6f714df",
-          "status": "APPROVED"
-        },
-        {
-          "id": "model09-v1-p4",
-          "text": "A chemical element is a substance that",
-          "words": 7,
-          "tool": null,
-          "toolSchemaJson": null,
-          "textSha256": "a0e5a02f660fd7319882a369157202d249c5c7b57bef3aafb72893c591ffbf51",
-          "status": "APPROVED"
-        },
-        {
-          "id": "model09-v1-p5",
-          "text": "The Earth orbits around",
-          "words": 4,
-          "tool": null,
-          "toolSchemaJson": null,
-          "textSha256": "1faf9b7f1e47c6251152b004fcf13a943ac23bd131532bd58ee464232c2ea74e",
-          "status": "APPROVED"
-        }
-      ]
-    },
-    {
-      "promptSet": "model10-v1",
-      "modelNumber": 10,
-      "modelId": "model10",
-      "displayName": "Tool Assistant",
-      "status": "APPROVED",
-      "mode": "chat",
-      "stage": "toolcall",
-      "tokenizerName": "neox",
-      "toolSet": "utilities-v1",
-      "systemPrompt": "You are a helpful assistant with access to tools.",
-      "systemSha256": "a05a069d0e606fd90ee580abb1d9b64b7cf34a4ea303f2019ba2a8cb1b74ed12",
-      "generation": {
-        "temperature": 0.7,
-        "topP": 0.9,
-        "seed": 7,
-        "maxNewTokens": 64,
-        "maxToolRounds": 1
-      },
-      "prompts": [
-        {
-          "id": "model10-v1-p1",
-          "text": "Please convert 100 USD to EUR.",
-          "words": 6,
-          "tool": "convert_currency",
-          "toolSchemaJson": "{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"number\",\"description\":\"Amount to convert.\"},\"from\":{\"type\":\"string\",\"description\":\"Source currency code, e.g. USD.\"},\"to\":{\"type\":\"string\",\"description\":\"Target currency code, e.g. EUR.\"}},\"required\":[\"amount\",\"from\",\"to\"],\"additionalProperties\":false}",
-          "textSha256": "dc545bdd0c1bb488257e522e9438df022c3d4dfc3ebe78db17f54cb472032de2",
-          "status": "APPROVED"
-        },
-        {
-          "id": "model10-v1-p2",
-          "text": "Convert 250 EUR to USD.",
-          "words": 5,
-          "tool": "convert_currency",
-          "toolSchemaJson": "{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"number\",\"description\":\"Amount to convert.\"},\"from\":{\"type\":\"string\",\"description\":\"Source currency code, e.g. USD.\"},\"to\":{\"type\":\"string\",\"description\":\"Target currency code, e.g. EUR.\"}},\"required\":[\"amount\",\"from\",\"to\"],\"additionalProperties\":false}",
-          "textSha256": "109b7681a8ec39e58a1c3a22273b2f312a38b568dd24a459771e3607bfc81a7e",
-          "status": "APPROVED"
-        },
-        {
-          "id": "model10-v1-p3",
-          "text": "Calculate the discount on a price of 1500 with a discount_percentage of 20.",
-          "words": 13,
-          "tool": "calculate_discount",
-          "toolSchemaJson": "{\"type\":\"object\",\"properties\":{\"price\":{\"type\":\"number\",\"description\":\"Original price.\"},\"discount_percentage\":{\"type\":\"number\",\"description\":\"Discount percent, 0 to 100.\"}},\"required\":[\"price\",\"discount_percentage\"],\"additionalProperties\":false}",
-          "textSha256": "5b14dbe08184a8c20d83813c8f8086c43f2b1de30798e7b8ef6975772d9e215e",
-          "status": "APPROVED"
-        },
-        {
-          "id": "model10-v1-p4",
-          "text": "Use calculate_tip with a bill of 800 and tip_percentage of 15.",
-          "words": 11,
-          "tool": "calculate_tip",
-          "toolSchemaJson": "{\"type\":\"object\",\"properties\":{\"bill\":{\"type\":\"number\",\"description\":\"Bill amount.\"},\"tip_percentage\":{\"type\":\"number\",\"description\":\"Tip percent, 0 to 100.\"}},\"required\":[\"bill\",\"tip_percentage\"],\"additionalProperties\":false}",
-          "textSha256": "3434a9415967815750e4a691be6c5792a756a23a7bf0fe4a845c9bc9d205b41c",
-          "status": "APPROVED"
-        },
-        {
-          "id": "model10-v1-p5",
-          "text": "Use get_stock_price with the ticker TSLA.",
-          "words": 6,
-          "tool": "get_stock_price",
-          "toolSchemaJson": "{\"type\":\"object\",\"properties\":{\"ticker\":{\"type\":\"string\",\"description\":\"Stock ticker symbol, e.g. TCS or TSLA.\"}},\"required\":[\"ticker\"],\"additionalProperties\":false}",
-          "textSha256": "8bfdb5144605b4bffa2e3021f9c7fd1b880dbdcc0f03b7f8b25d4c3c15116cab",
-          "status": "APPROVED"
-        }
-      ]
+     "id": "model01-v1-p5",
+     "text": "Write a two-sentence summary of what bees do.",
+     "words": 9,
+     "tool": null,
+     "toolSchemaJson": null,
+     "textSha256": "0ee6de1e86096c751b82fe6166db785677d8ff1de79d833cfcf5ac3343de3fe7",
+     "status": "APPROVED"
     }
-  ],
-  "notes": {
-    "stageSelection": "stage is the presented stage chosen by production-sampler evaluation (models 5/6 present pretrain in next-word mode).",
-    "schemaMinimization": "only the single tool schema referenced by a prompt is present; others are null.",
-    "qualification": "see modelNN-v1-qualification.json and summary-v1.json in this directory."
+   ]
+  },
+  {
+   "promptSet": "model02-v1",
+   "modelNumber": 2,
+   "modelId": "model02",
+   "displayName": "Helpful Assistant",
+   "status": "APPROVED",
+   "mode": "chat",
+   "stage": "sft",
+   "tokenizerName": "neox",
+   "toolSet": "utilities-v1",
+   "systemPrompt": "You are a helpful assistant. Give short, friendly answers; use a demo tool when asked.",
+   "systemSha256": "45b488b4b4c46cabaeaa356422181fcf3b2ffb7d8cab25ef29886f4e68fdf0f6",
+   "generation": {
+    "temperature": 0.7,
+    "topP": 0.9,
+    "seed": 7,
+    "maxNewTokens": 96,
+    "maxToolRounds": 1
+   },
+   "prompts": [
+    {
+     "id": "model02-v1-p1",
+     "text": "Give three ideas for a healthy breakfast, as a numbered list.",
+     "words": 11,
+     "tool": null,
+     "toolSchemaJson": null,
+     "textSha256": "e7d68aaaf839b3d55897fe51a35d260938eaba41740f79cc6e4b9381004e2194",
+     "status": "APPROVED"
+    },
+    {
+     "id": "model02-v1-p2",
+     "text": "Write one sentence defining patience.",
+     "words": 5,
+     "tool": null,
+     "toolSchemaJson": null,
+     "textSha256": "30932d7218e782dd3f9f80ba28b440d7d729071cd01f5697d85b8fa4daa28bb0",
+     "status": "APPROVED"
+    },
+    {
+     "id": "model02-v1-p3",
+     "text": "Recommend a fun hobby for a 60-year-old and say why in one sentence.",
+     "words": 15,
+     "tool": null,
+     "toolSchemaJson": null,
+     "textSha256": "a5d25cff26778713702dcffdc35792448cdf42df13b02601182addb8e7882f3c",
+     "status": "APPROVED"
+    },
+    {
+     "id": "model02-v1-p4",
+     "text": "Write a polite two-line message to postpone a lunch meeting.",
+     "words": 11,
+     "tool": null,
+     "toolSchemaJson": null,
+     "textSha256": "ed7f2f1c281f9eee0c584ded14819ca3a09db4ff58568968d83f2f6d602c4753",
+     "status": "APPROVED"
+    },
+    {
+     "id": "model02-v1-p5",
+     "text": "Use the get_stock_price function to check the price of the ticker TCS.",
+     "words": 12,
+     "tool": "get_stock_price",
+     "toolSchemaJson": "{\"type\":\"object\",\"properties\":{\"ticker\":{\"type\":\"string\",\"description\":\"Stock ticker symbol, e.g. TCS or TSLA.\"}},\"required\":[\"ticker\"],\"additionalProperties\":false}",
+     "textSha256": "1a031267a6daaef1bbd6f517723407dd4a6346c689c49c296419e3f254da35d3",
+     "status": "APPROVED"
+    }
+   ]
+  },
+  {
+   "promptSet": "model03-v1",
+   "modelNumber": 3,
+   "modelId": "model03",
+   "displayName": "Python Builder",
+   "status": "APPROVED",
+   "mode": "chat",
+   "stage": "toolcall",
+   "tokenizerName": "starcoder",
+   "toolSet": "coder-v1",
+   "systemPrompt": "You are a Python coding assistant. Write short, correct Python code.",
+   "systemSha256": "3bfe7b68363bfdddc23883368e0002ac4d1da05afcc343342ce06ceabad4271a",
+   "generation": {
+    "temperature": 0.7,
+    "topP": 0.9,
+    "seed": 7,
+    "maxNewTokens": 96,
+    "maxToolRounds": 1
+   },
+   "prompts": [
+    {
+     "id": "model03-v1-p1",
+     "text": "Write a Python function that returns the square of a number.",
+     "words": 11,
+     "tool": null,
+     "toolSchemaJson": null,
+     "textSha256": "d36e40178d9face8528ab9d56a164e9d50885ed225ab90a47945910082d1c8a3",
+     "status": "APPROVED"
+    },
+    {
+     "id": "model03-v1-p2",
+     "text": "Write a Python function that checks if a number is even.",
+     "words": 11,
+     "tool": null,
+     "toolSchemaJson": null,
+     "textSha256": "d72119e467c4f4f0962adfa6212e050bdfc9a57787d9ce94e71707883397f87b",
+     "status": "APPROVED"
+    },
+    {
+     "id": "model03-v1-p3",
+     "text": "Write a one-line Python expression that prints the numbers 1 to 5.",
+     "words": 13,
+     "tool": null,
+     "toolSchemaJson": null,
+     "textSha256": "1cd55dcede0a8985fd0a14521a6abb7319e6ea01c2fb37310b7c8a80f163c9a7",
+     "status": "APPROVED"
+    },
+    {
+     "id": "model03-v1-p4",
+     "text": "Write a Python function greet(name) that prints \"Hello, \" followed by the name.",
+     "words": 13,
+     "tool": null,
+     "toolSchemaJson": null,
+     "textSha256": "dfbdd21ecbce4c0625515bdb4ed1e1771927846bf2b34ae5272a0949692fcc5d",
+     "status": "APPROVED"
+    },
+    {
+     "id": "model03-v1-p5",
+     "text": "Explain in one line what len([10, 20, 30]) returns.",
+     "words": 10,
+     "tool": null,
+     "toolSchemaJson": null,
+     "textSha256": "5ea2f456651ee1957ead76688986669e57237023f530ef1b354bfa25edfa9b89",
+     "status": "APPROVED"
+    }
+   ]
+  },
+  {
+   "promptSet": "model04-v1",
+   "modelNumber": 4,
+   "modelId": "model04",
+   "displayName": "Polyglot Coder",
+   "status": "APPROVED",
+   "mode": "chat",
+   "stage": "sft",
+   "tokenizerName": "starcoder",
+   "toolSet": "coder-v1",
+   "systemPrompt": "You are a helpful assistant with access to tools.",
+   "systemSha256": "a05a069d0e606fd90ee580abb1d9b64b7cf34a4ea303f2019ba2a8cb1b74ed12",
+   "generation": {
+    "temperature": 0.7,
+    "topP": 0.9,
+    "seed": 7,
+    "maxNewTokens": 96,
+    "maxToolRounds": 1
+   },
+   "prompts": [
+    {
+     "id": "model04-v1-p1",
+     "text": "Write a JavaScript function named double that returns twice a number.",
+     "words": 11,
+     "tool": null,
+     "toolSchemaJson": null,
+     "textSha256": "d9326c4de87b1c33e84b73527f54330b745e99ca5bff8e62f7c4a44c1c14264f",
+     "status": "APPROVED"
+    },
+    {
+     "id": "model04-v1-p2",
+     "text": "Write an SQL query that selects the name and age columns from the table students.",
+     "words": 15,
+     "tool": null,
+     "toolSchemaJson": null,
+     "textSha256": "bcfdf5ed76a6b3f866bae96a374059d25803cc156ce16e7c5fb6e3ae39628b06",
+     "status": "APPROVED"
+    },
+    {
+     "id": "model04-v1-p3",
+     "text": "Write an HTML paragraph containing the text \"Hello, world\".",
+     "words": 9,
+     "tool": null,
+     "toolSchemaJson": null,
+     "textSha256": "366fe843300028c6b09ba56239ee5706d46ccbfcc4be2a5ba41f6e594e7122b1",
+     "status": "APPROVED"
+    },
+    {
+     "id": "model04-v1-p4",
+     "text": "Write a Java method that adds two integers and returns their sum.",
+     "words": 12,
+     "tool": null,
+     "toolSchemaJson": null,
+     "textSha256": "da0f0e35f507f51036c436c42f425831a195d8c7e0ad14e69549c71b7fe80cf8",
+     "status": "APPROVED"
+    },
+    {
+     "id": "model04-v1-p5",
+     "text": "Write a TypeScript function that returns the length of a given string.",
+     "words": 12,
+     "tool": null,
+     "toolSchemaJson": null,
+     "textSha256": "3421bfd2c391981cefefd3338492ad95ed7ee309f15720f6a78394ce3a7e2fb2",
+     "status": "APPROVED"
+    }
+   ]
+  },
+  {
+   "promptSet": "model05-v1",
+   "modelNumber": 5,
+   "modelId": "model05",
+   "displayName": "Tamil + English",
+   "status": "APPROVED",
+   "mode": "next-word",
+   "stage": "pretrain",
+   "tokenizerName": "tamil",
+   "toolSet": "",
+   "systemPrompt": null,
+   "systemSha256": null,
+   "generation": {
+    "temperature": 0.7,
+    "topP": 0.9,
+    "seed": 7,
+    "maxNewTokens": 64,
+    "maxToolRounds": 0
+   },
+   "prompts": [
+    {
+     "id": "model05-v1-p1",
+     "text": "\u0b9a\u0bc6\u0ba9\u0bcd\u0ba9\u0bc8 \u0bae\u0bbe\u0ba8\u0b95\u0bb0\u0bbf\u0bb2\u0bcd \u0ba8\u0bc7\u0bb1\u0bcd\u0bb1\u0bc1",
+     "words": 3,
+     "tool": null,
+     "toolSchemaJson": null,
+     "textSha256": "64a9a9db4ebeb2c30eee440ab2d9d90d7a9599b7fe23962192089be83c50aa56",
+     "status": "APPROVED"
+    },
+    {
+     "id": "model05-v1-p2",
+     "text": "\u0b8a\u0bb0\u0bbf\u0bb2\u0bcd \u0b89\u0bb3\u0bcd\u0bb3 \u0b95\u0bcb\u0bb5\u0bbf\u0bb2\u0bbf\u0bb2\u0bcd",
+     "words": 3,
+     "tool": null,
+     "toolSchemaJson": null,
+     "textSha256": "013d13a5e179efb30d8d10033d3195f20696b9143440d86e86fe418fa303cdf1",
+     "status": "APPROVED"
+    },
+    {
+     "id": "model05-v1-p3",
+     "text": "\u0bae\u0bc7\u0b9f\u0bcd\u0b9f\u0bc2\u0bb0\u0bcd \u0b85\u0ba3\u0bc8\u0baf\u0bbf\u0bb2\u0bcd \u0b87\u0bb0\u0bc1\u0ba8\u0bcd\u0ba4\u0bc1",
+     "words": 3,
+     "tool": null,
+     "toolSchemaJson": null,
+     "textSha256": "8c0f8f82cf3267aa6e76996bdcfec719db8cce5a89a1bdd31c978c6212c6dab9",
+     "status": "APPROVED"
+    },
+    {
+     "id": "model05-v1-p4",
+     "text": "\u0ba4\u0bae\u0bbf\u0bb4\u0b95\u0ba4\u0bcd\u0ba4\u0bbf\u0bb2\u0bcd",
+     "words": 1,
+     "tool": null,
+     "toolSchemaJson": null,
+     "textSha256": "41d0474ae94f1e7074af3ea18ccd2be792a7354d96cc9513563d054d0afa9af0",
+     "status": "APPROVED"
+    },
+    {
+     "id": "model05-v1-p5",
+     "text": "\u0ba4\u0bae\u0bbf\u0bb4\u0b95\u0ba4\u0bcd\u0ba4\u0bbf\u0bb2\u0bcd \u0ba8\u0bc7\u0bb1\u0bcd\u0bb1\u0bc1 \u0baa\u0bc6\u0baf\u0bcd\u0ba4 \u0bae\u0bb4\u0bc8\u0baf\u0bbf\u0bb2\u0bcd",
+     "words": 4,
+     "tool": null,
+     "toolSchemaJson": null,
+     "textSha256": "4be55881a96c043c18c4eb9da714456d2c45f117ce26a70c9ac93915b2058aff",
+     "status": "APPROVED"
+    }
+   ]
+  },
+  {
+   "promptSet": "model06-v1",
+   "modelNumber": 6,
+   "modelId": "model06",
+   "displayName": "Tamil Voice",
+   "status": "APPROVED",
+   "mode": "next-word",
+   "stage": "pretrain",
+   "tokenizerName": "tamil",
+   "toolSet": "",
+   "systemPrompt": null,
+   "systemSha256": null,
+   "generation": {
+    "temperature": 0.7,
+    "topP": 0.9,
+    "seed": 7,
+    "maxNewTokens": 64,
+    "maxToolRounds": 0
+   },
+   "prompts": [
+    {
+     "id": "model06-v1-p1",
+     "text": "\u0b9a\u0bc6\u0ba9\u0bcd\u0ba9\u0bc8\u0baf\u0bbf\u0bb2\u0bcd \u0baa\u0bb2\u0ba4\u0bcd\u0ba4 \u0bae\u0bb4\u0bc8 \u0baa\u0bc6\u0baf\u0bcd\u0ba4\u0ba4\u0bc1",
+     "words": 4,
+     "tool": null,
+     "toolSchemaJson": null,
+     "textSha256": "5654431e9e2ae0a931bacfb189234671d14bddf4b21699085d28fef33e829075",
+     "status": "APPROVED"
+    },
+    {
+     "id": "model06-v1-p2",
+     "text": "\u0bae\u0bc7\u0b9f\u0bcd\u0b9f\u0bc2\u0bb0\u0bcd \u0b85\u0ba3\u0bc8\u0baf\u0bbf\u0bb2\u0bcd \u0b87\u0bb0\u0bc1\u0ba8\u0bcd\u0ba4\u0bc1",
+     "words": 3,
+     "tool": null,
+     "toolSchemaJson": null,
+     "textSha256": "8c0f8f82cf3267aa6e76996bdcfec719db8cce5a89a1bdd31c978c6212c6dab9",
+     "status": "APPROVED"
+    },
+    {
+     "id": "model06-v1-p3",
+     "text": "\u0b9a\u0bc6\u0ba9\u0bcd\u0ba9\u0bc8 \u0bae\u0bbe\u0ba8\u0b95\u0bb0\u0bbf\u0bb2\u0bcd \u0ba8\u0bc7\u0bb1\u0bcd\u0bb1\u0bc1",
+     "words": 3,
+     "tool": null,
+     "toolSchemaJson": null,
+     "textSha256": "64a9a9db4ebeb2c30eee440ab2d9d90d7a9599b7fe23962192089be83c50aa56",
+     "status": "APPROVED"
+    },
+    {
+     "id": "model06-v1-p4",
+     "text": "\u0b8a\u0bb0\u0bbf\u0bb2\u0bcd \u0b89\u0bb3\u0bcd\u0bb3 \u0b95\u0bcb\u0bb5\u0bbf\u0bb2\u0bbf\u0bb2\u0bcd",
+     "words": 3,
+     "tool": null,
+     "toolSchemaJson": null,
+     "textSha256": "013d13a5e179efb30d8d10033d3195f20696b9143440d86e86fe418fa303cdf1",
+     "status": "APPROVED"
+    },
+    {
+     "id": "model06-v1-p5",
+     "text": "\u0b9a\u0bc6\u0ba9\u0bcd\u0ba9\u0bc8 \u0bb5\u0bbe\u0ba9\u0bbf\u0bb2\u0bc8 \u0b86\u0baf\u0bcd\u0bb5\u0bc1 \u0bae\u0bc8\u0baf\u0bae\u0bcd,",
+     "words": 4,
+     "tool": null,
+     "toolSchemaJson": null,
+     "textSha256": "14e7ce3e20d338d1c3a2c99d189e2af68db1f9fb2faf3e54a3bd508df5d6373b",
+     "status": "APPROVED"
+    }
+   ]
+  },
+  {
+   "promptSet": "model07-v1",
+   "modelNumber": 7,
+   "modelId": "model07",
+   "displayName": "Indian Law Guide",
+   "status": "APPROVED",
+   "mode": "chat",
+   "stage": "sft",
+   "tokenizerName": "neox",
+   "toolSet": "",
+   "systemPrompt": "You are an educational guide to Indian law. Explain basics in plain language. This is not legal advice.",
+   "systemSha256": "80733954067225dfe3113530fe027355b1320d9dac7b9ca34c266e439995ff44",
+   "generation": {
+    "temperature": 0.7,
+    "topP": 0.9,
+    "seed": 7,
+    "maxNewTokens": 96,
+    "maxToolRounds": 0
+   },
+   "prompts": [
+    {
+     "id": "model07-v1-p1",
+     "text": "What does Article 21 of the Indian Constitution guarantee? Answer in two sentences.",
+     "words": 13,
+     "tool": null,
+     "toolSchemaJson": null,
+     "textSha256": "e0596d181d535a4ae26032bcf7cba4899d85923615d9aff6b5a195622aa035af",
+     "status": "APPROVED"
+    },
+    {
+     "id": "model07-v1-p2",
+     "text": "What is a First Information Report?",
+     "words": 6,
+     "tool": null,
+     "toolSchemaJson": null,
+     "textSha256": "41a97ea715590843be2793268039cbea6d257bade9c80adafa6ec800e929312b",
+     "status": "APPROVED"
+    },
+    {
+     "id": "model07-v1-p3",
+     "text": "List two fundamental rights from the Indian Constitution.",
+     "words": 8,
+     "tool": null,
+     "toolSchemaJson": null,
+     "textSha256": "305e091be0e5bb7994f29487d01c8b9f984fe36b9e618dd082a1171a78b53e6d",
+     "status": "APPROVED"
+    },
+    {
+     "id": "model07-v1-p4",
+     "text": "What does bail mean in India?",
+     "words": 6,
+     "tool": null,
+     "toolSchemaJson": null,
+     "textSha256": "6db6747e4b9c604507c9637e639b6d1fe05c8d2cccce0f073a9a70b5038f59e0",
+     "status": "APPROVED"
+    },
+    {
+     "id": "model07-v1-p5",
+     "text": "What is the right to freedom of speech?",
+     "words": 8,
+     "tool": null,
+     "toolSchemaJson": null,
+     "textSha256": "4f79853c5ae7afe4541820c2e03b40b1831fab1c300baf82e6e95fb61a02f674",
+     "status": "APPROVED"
+    }
+   ]
+  },
+  {
+   "promptSet": "model08-v1",
+   "modelNumber": 8,
+   "modelId": "model08",
+   "displayName": "Math Solver",
+   "status": "APPROVED",
+   "mode": "chat",
+   "stage": "sft",
+   "tokenizerName": "neox",
+   "toolSet": "utilities-v1",
+   "systemPrompt": "You are a math helper. Show brief, correct calculations.",
+   "systemSha256": "0594c507eca5255b297920810267de4eecdd7eee2586ca653e602426306c7927",
+   "generation": {
+    "temperature": 0.7,
+    "topP": 0.9,
+    "seed": 7,
+    "maxNewTokens": 96,
+    "maxToolRounds": 1
+   },
+   "prompts": [
+    {
+     "id": "model08-v1-p1",
+     "text": "What is 15% of 200?",
+     "words": 5,
+     "tool": null,
+     "toolSchemaJson": null,
+     "textSha256": "dc04912a4600df51368a0cc522817993f7705496e899e51e9716b6d8221daf2f",
+     "status": "APPROVED"
+    },
+    {
+     "id": "model08-v1-p2",
+     "text": "Solve for x: 2x + 3 = 11. Give the answer and one step.",
+     "words": 12,
+     "tool": null,
+     "toolSchemaJson": null,
+     "textSha256": "58a10b24b304d420d2a12cb85887f5a958702bc0d7460b1b2054b4bc0ea7c647",
+     "status": "APPROVED"
+    },
+    {
+     "id": "model08-v1-p3",
+     "text": "What is the sum of the first 10 natural numbers?",
+     "words": 10,
+     "tool": null,
+     "toolSchemaJson": null,
+     "textSha256": "bb66bc8bb990b8928c84d7c9b322456e96b45a7d5a4f746f7c982375cfd79b17",
+     "status": "APPROVED"
+    },
+    {
+     "id": "model08-v1-p4",
+     "text": "The area of a square is 49 square cm. What is the length of one side?",
+     "words": 16,
+     "tool": null,
+     "toolSchemaJson": null,
+     "textSha256": "8b9fa0503280c99e62eadbce2c6bbf1256da6e4852123e8fd581a03cf0ddc5e8",
+     "status": "APPROVED"
+    },
+    {
+     "id": "model08-v1-p5",
+     "text": "Use the factorial function to compute 5!.",
+     "words": 7,
+     "tool": "factorial",
+     "toolSchemaJson": "{\"type\":\"object\",\"properties\":{\"n\":{\"type\":\"integer\",\"description\":\"Non-negative integer from 0 to 20.\"}},\"required\":[\"n\"],\"additionalProperties\":false}",
+     "textSha256": "a0c9c1b5b6a3ee7382000cf210fea717ff5629677d56bc665b64b4fc61c14283",
+     "status": "APPROVED"
+    }
+   ]
+  },
+  {
+   "promptSet": "model09-v1",
+   "modelNumber": 9,
+   "modelId": "model09",
+   "displayName": "Science Explainer",
+   "status": "APPROVED",
+   "mode": "next-word",
+   "stage": "pretrain",
+   "tokenizerName": "neox",
+   "toolSet": "",
+   "systemPrompt": null,
+   "systemSha256": null,
+   "generation": {
+    "temperature": 0.7,
+    "topP": 0.9,
+    "seed": 7,
+    "maxNewTokens": 64,
+    "maxToolRounds": 0
+   },
+   "prompts": [
+    {
+     "id": "model09-v1-p1",
+     "text": "Water is made of two hydrogen atoms and one",
+     "words": 9,
+     "tool": null,
+     "toolSchemaJson": null,
+     "textSha256": "43531b5e69eb95048979cd3d9dde2800eb421d302f2ac5ec90fe69d6b221133b",
+     "status": "APPROVED"
+    },
+    {
+     "id": "model09-v1-p2",
+     "text": "Plants use sunlight to make",
+     "words": 5,
+     "tool": null,
+     "toolSchemaJson": null,
+     "textSha256": "6eb44d8553338c2a56fd152a7c87ac59a52a2b49694ce8978da7d4ceb538b4c9",
+     "status": "APPROVED"
+    },
+    {
+     "id": "model09-v1-p3",
+     "text": "The sun is the",
+     "words": 4,
+     "tool": null,
+     "toolSchemaJson": null,
+     "textSha256": "a7171bc70e8f4ed460326a18e0b27a35e45ab49091f8c786ec583aa2a6f714df",
+     "status": "APPROVED"
+    },
+    {
+     "id": "model09-v1-p4",
+     "text": "A chemical element is a substance that",
+     "words": 7,
+     "tool": null,
+     "toolSchemaJson": null,
+     "textSha256": "a0e5a02f660fd7319882a369157202d249c5c7b57bef3aafb72893c591ffbf51",
+     "status": "APPROVED"
+    },
+    {
+     "id": "model09-v1-p5",
+     "text": "The Earth orbits around",
+     "words": 4,
+     "tool": null,
+     "toolSchemaJson": null,
+     "textSha256": "1faf9b7f1e47c6251152b004fcf13a943ac23bd131532bd58ee464232c2ea74e",
+     "status": "APPROVED"
+    }
+   ]
+  },
+  {
+   "promptSet": "model10-v1",
+   "modelNumber": 10,
+   "modelId": "model10",
+   "displayName": "Tool Assistant",
+   "status": "APPROVED",
+   "mode": "chat",
+   "stage": "toolcall",
+   "tokenizerName": "neox",
+   "toolSet": "utilities-v1",
+   "systemPrompt": "You are a helpful assistant with access to tools.",
+   "systemSha256": "a05a069d0e606fd90ee580abb1d9b64b7cf34a4ea303f2019ba2a8cb1b74ed12",
+   "generation": {
+    "temperature": 0.7,
+    "topP": 0.9,
+    "seed": 7,
+    "maxNewTokens": 96,
+    "maxToolRounds": 1
+   },
+   "prompts": [
+    {
+     "id": "model10-v1-p1",
+     "text": "Please convert 100 USD to EUR.",
+     "words": 6,
+     "tool": "convert_currency",
+     "toolSchemaJson": "{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"number\",\"description\":\"Amount to convert.\"},\"from\":{\"type\":\"string\",\"description\":\"Source currency code, e.g. USD.\"},\"to\":{\"type\":\"string\",\"description\":\"Target currency code, e.g. EUR.\"}},\"required\":[\"amount\",\"from\",\"to\"],\"additionalProperties\":false}",
+     "textSha256": "dc545bdd0c1bb488257e522e9438df022c3d4dfc3ebe78db17f54cb472032de2",
+     "status": "APPROVED"
+    },
+    {
+     "id": "model10-v1-p2",
+     "text": "Convert 250 EUR to USD.",
+     "words": 5,
+     "tool": "convert_currency",
+     "toolSchemaJson": "{\"type\":\"object\",\"properties\":{\"amount\":{\"type\":\"number\",\"description\":\"Amount to convert.\"},\"from\":{\"type\":\"string\",\"description\":\"Source currency code, e.g. USD.\"},\"to\":{\"type\":\"string\",\"description\":\"Target currency code, e.g. EUR.\"}},\"required\":[\"amount\",\"from\",\"to\"],\"additionalProperties\":false}",
+     "textSha256": "109b7681a8ec39e58a1c3a22273b2f312a38b568dd24a459771e3607bfc81a7e",
+     "status": "APPROVED"
+    },
+    {
+     "id": "model10-v1-p3",
+     "text": "Calculate the discount on a price of 1500 with a discount_percentage of 20.",
+     "words": 13,
+     "tool": "calculate_discount",
+     "toolSchemaJson": "{\"type\":\"object\",\"properties\":{\"price\":{\"type\":\"number\",\"description\":\"Original price.\"},\"discount_percentage\":{\"type\":\"number\",\"description\":\"Discount percent, 0 to 100.\"}},\"required\":[\"price\",\"discount_percentage\"],\"additionalProperties\":false}",
+     "textSha256": "5b14dbe08184a8c20d83813c8f8086c43f2b1de30798e7b8ef6975772d9e215e",
+     "status": "APPROVED"
+    },
+    {
+     "id": "model10-v1-p4",
+     "text": "Use calculate_tip with a bill of 800 and tip_percentage of 15.",
+     "words": 11,
+     "tool": "calculate_tip",
+     "toolSchemaJson": "{\"type\":\"object\",\"properties\":{\"bill\":{\"type\":\"number\",\"description\":\"Bill amount.\"},\"tip_percentage\":{\"type\":\"number\",\"description\":\"Tip percent, 0 to 100.\"}},\"required\":[\"bill\",\"tip_percentage\"],\"additionalProperties\":false}",
+     "textSha256": "3434a9415967815750e4a691be6c5792a756a23a7bf0fe4a845c9bc9d205b41c",
+     "status": "APPROVED"
+    },
+    {
+     "id": "model10-v1-p5",
+     "text": "Use get_stock_price with the ticker TSLA.",
+     "words": 6,
+     "tool": "get_stock_price",
+     "toolSchemaJson": "{\"type\":\"object\",\"properties\":{\"ticker\":{\"type\":\"string\",\"description\":\"Stock ticker symbol, e.g. TCS or TSLA.\"}},\"required\":[\"ticker\"],\"additionalProperties\":false}",
+     "textSha256": "8bfdb5144605b4bffa2e3021f9c7fd1b880dbdcc0f03b7f8b25d4c3c15116cab",
+     "status": "APPROVED"
+    }
+   ]
   }
+ ],
+ "notes": {
+  "stageSelection": "stage is the presented stage chosen by production-sampler evaluation (models 5/6 present pretrain in next-word mode).",
+  "schemaMinimization": "only the single tool schema referenced by a prompt is present; others are null.",
+  "qualification": "see modelNN-v1-qualification.json and summary-v1.json in this directory."
+ }
 }

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "stage-decision-v1",
+  "model": "model03",
+  "candidates": [
+    "pretrain",
+    "sft",
+    "toolcall"
+  ],
+  "decision": "toolcall",
+  "method": "Ran the locked showcase set (model03-v1: p1-p5, chat mode, seed 7, temp 0.7, top-p 0.9, max 64, maxToolRounds 1, coder-v1) against model03/sft.onnx and model03/toolcall.onnx, plus the pretrain continuation set in next-word mode (max 96), with the exact production sampler (mulberry32, onnxruntime-web WASM). No dpo export exists on the node (dpo data present but never exported).",
+  "evidence": {
+    "toolcall": {
+      "p1": "clearest Python frame of the available stages: 'I agree with that, I can calculate the square of a number using the sqrt function... Here is the Python function: def square_of_a_number(n):'",
+      "p2": "'I've defined the function check_digit function in Python. It checks if a number is odd...' (on-topic)",
+      "p3": "'I understand that you have a Python function print_numbers that prints the numbers 2 to 5. Let's write this code now. ```python def print_numbers(numbers):' (writes real code)",
+      "p4": "'I am going to write a Python function named name... prints Hello, followed by the name.' (on-topic)",
+      "p5": "len([10,20,30]) explanation attempt (on-topic)",
+      "verdict": "5/5 stay on Python intent; best coaching register of the three stages"
+    },
+    "sft": {
+      "p1": "writes `def Square(x,y): return x + y` (arithmetically wrong, adds instead of squaring) and repeats def Square2/Square3",
+      "p2": "dumps unrelated imports (sys, os, jinja2) — not the even-check function",
+      "p3": "emits a docstring-ish import dump, not `print(1..5)`",
+      "p4": "repeats the prompt instead of writing greet()",
+      "p5": "Korean gibberish ('의 개수가게 한다...') — a script/attractor collapse",
+      "verdict": "SFT collapsed; worst stage"
+    },
+    "pretrain": {
+      "p1": "loops `def to_square(x): return square(x)` repeatedly",
+      "p2": "loops is_odd/is_square defs",
+      "p3": "ends cleanly with `if __name__ == '__main__': main()`",
+      "p4": "loops a GreetMessage API style",
+      "p5": "'create a random number of random numbers' loop",
+      "verdict": "repetitive next-word; not polished enough to showcase"
+    }
+  },
+  "reason": "SFT collapsed into a non-English/non-Python attractor (Korean dump on p5, import dumps and a wrong `x+y` 'square' on p1). The only node stage that exports and stays on Python intent across all five prompts is toolcall, which writes real Python code (p1, p3) in a coaching register. Follows the model10 precedent of presenting toolcall when it is the best stage; the coder-v1 binding stays for the chat coach flow.",
+  "note": "No dpo.onnx was exported on the node (dpo training data present but slot-end yield skipped the permanent export, same pattern as model09). Presenting toolcall avoids that gap entirely. Supersedes the catalog's previous PENDING/null stage."
+}

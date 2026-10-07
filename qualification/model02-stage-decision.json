@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "stage-decision-v1",
+  "model": "model02",
+  "candidates": [
+    "pretrain",
+    "sft",
+    "dpo",
+    "toolcall"
+  ],
+  "decision": "sft",
+  "method": "Ran the locked showcase set (model02-v1: p1-p5, chat mode, seed 7, temp 0.7, top-p 0.9, max 64, maxToolRounds 1, utilities-v1, single-schema get_stock_price injection for p5) against model02/sft.onnx, model02/dpo.onnx and model02/toolcall.onnx, plus the pretrain continuation set in next-word mode (max 96), with the exact production sampler (mulberry32, onnxruntime-web WASM).",
+  "evidence": {
+    "sft": {
+      "p1": "stays on healthy breakfast ('To ensure a healthy breakfast, you can start by introducing the concept of a healthy breakfast')",
+      "p2": "wording rambles but keeps an assistant register",
+      "p3": "stays on the 60-year-old hobby ask",
+      "p4": "off-topic (introduces 'a team of friends...')",
+      "p5": "on-intent framing: 'To check the price of the ticker TCS, we can use the Get_stock function...' (no valid tool call, but correct intent)",
+      "verdict": "3/5 clearly on-intent; keeps the instruction-following register without hallucinating tools"
+    },
+    "dpo": {
+      "p1": "malformed tool name create_game (not in utilities-v1), reply 'The created tool is not available.'",
+      "p2": "canned 'You're welcome! If you have any other questions, feel free to ask.' (topic-blind)",
+      "p3": "malformed calculate_discount args (hobby ask), recipe-shaped noise",
+      "p4": "canned 'You're welcome!'",
+      "p5": "'Sure, I can help with that. Let me calculate the get_stock_price.' (no tool call)",
+      "verdict": "DPO regresses hard to canned replies + malformed tool names; unusable"
+    },
+    "toolcall": {
+      "p1": "malformed create_game",
+      "p2": "canned 'You're welcome!'",
+      "p3": "malformed get_fun ('The answer is $c... the payment would be $2')",
+      "p4": "vague 'Sure, I can help with that. Let me find the information for you.'",
+      "p5": "stammers 'provide me with the ticker, the the ticker, and the the the theer?'",
+      "verdict": "worst stage; malformed tool names + canned replies + stammer"
+    },
+    "pretrain": {
+      "p1": "generic parenting/health text, not breakfast ideas",
+      "p4": "generic park-trip planning text, not a lunch-meeting postpone message",
+      "p5": "hallucinates 'The TCS stock today is $1,000,000...'",
+      "verdict": "off-topic continuation; not a showcase"
+    }
+  },
+  "reason": "SFT is the only stage that keeps the instruction-following assistant register across the locked set (breakfast p1, hobby p3, stock-price p5 framing) without collapsing to canned 'You're welcome' replies or hallucinating malformed tool names. DPO and toolcall both regress (canned + malformed tools); pretrain next-word is off-topic. Follows the established rule of presenting the best stage, not the last.",
+  "note": "The utilities-v1 get_stock_price binding is retained in the catalog for p5, which SFT answers in text framing (no working tool round at this size, matching the model08 sft precedent). Supersedes the catalog's previous PENDING/null stage."
+}

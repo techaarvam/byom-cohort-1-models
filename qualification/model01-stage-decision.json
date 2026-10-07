@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "stage-decision-v1",
+  "model": "model01",
+  "candidates": [
+    "pretrain",
+    "sft",
+    "dpo"
+  ],
+  "decision": "sft",
+  "method": "Ran the locked showcase set (model01-v1: p1-p5, chat mode, seed 7, temp 0.7, top-p 0.9, max 64, maxToolRounds 0) against model01/sft.onnx and model01/dpo.onnx, and the pretrain continuation set in next-word mode (max 96), with the exact production sampler (mulberry32, onnxruntime-web WASM).",
+  "evidence": {
+    "sft": {
+      "p1": "opens 'Dear Adrienne, I hope this message finds you well...' (email-form letter, on-intent)",
+      "p2": "stays on exercise/health ('recommended exercise for health is a healthy lifestyle... active, maintain a healthy weight')",
+      "p3": "clean one-line greeting, ends reason=end: 'Dear All, I hope you're well... excited to be a friend.'",
+      "p4": "answers 'The capital city of Japan is Tokyo, with a capital of around 2,000,000 inhabitants.' (correct)",
+      "p5": "drifts toward 'bees as a fundamental concept in mathematics' (only weak prompt, still English)",
+      "verdict": "4/5 on-topic; email form + correct facts; Everyday English intent reads correctly"
+    },
+    "dpo": {
+      "p1": "collapses to 'Dear, dear, dear friend, dear friend...' loop",
+      "p2": "near-topic ('In short, exercise is a crucial component of maintaining good health')",
+      "p3": "drifts off to 'Dear King, ... glad you're enjoying your music'",
+      "p4": "correct Tokyo answer",
+      "p5": "near-topic ('bee as a fundamental aspect of honey production')",
+      "verdict": "3/5; p1/p3 framing is off; no better than SFT"
+    },
+    "pretrain": {
+      "p2": "reasonable health listicle continuation",
+      "p4": "degenerate loop: 'The capital city of Japan is located in Tokyo.' repeated ~10x",
+      "p5": "'The female is the female...' loop",
+      "verdict": "next-word mode loops; not a clean showcase"
+    }
+  },
+  "reason": "SFT is the only stage that stays in an English-writing frame across the set (email p1, greeting p3, correct Tokyo p4). DPO regresses to loops (p1) and off-topic drift (p3); pretrain next-word loops badly on p4/p5. Follows the model04/07/08 precedent of presenting SFT when DPO regresses or is no better.",
+  "note": "Supersedes the catalog's previous PENDING/null stage."
+}

@@ -3,16 +3,16 @@
   "manifestVersion": "cohort-1-v1",
   "releaseTag": "cohort-1-v1",
   "releaseBase": "https://storage.googleapis.com/techaarvam-byom-cohort-1-models/cohort-1-v1",
-  "generatedAt": "2026-10-05T02:27:35.397Z",
+  "generatedAt": "2026-10-07T22:49:59.330Z",
   "models": [
     {
       "promptSet": "model01-v1",
       "modelNumber": 1,
       "modelId": "model01",
       "displayName": "Everyday English",
-      "status": "PENDING",
+      "status": "APPROVED",
       "mode": "chat",
-      "stage": null,
+      "stage": "sft",
       "tokenizerName": "neox",
       "toolSet": "",
       "parameterCount": 120000000,
@@ -21,8 +21,8 @@
       "contextLength": 1024,
       "artifact": {
         "url": "https://storage.googleapis.com/techaarvam-byom-cohort-1-models/cohort-1-v1/model01-final-fp32.onnx",
-        "bytes": null,
-        "sha256": null
+        "bytes": 478320686,
+        "sha256": "c52aabe7703990fce5166f834f8e231896f6e56f67b52975b27f2567a2aab429"
       },
       "tokenizer": {
         "name": "neox",
@@ -35,7 +35,7 @@
         "temperature": 0.7,
         "topP": 0.9,
         "seed": 7,
-        "maxNewTokens": 64,
+        "maxNewTokens": 96,
         "maxToolRounds": 0
       }
     },
@@ -44,9 +44,9 @@
       "modelNumber": 2,
       "modelId": "model02",
       "displayName": "Helpful Assistant",
-      "status": "PENDING",
+      "status": "APPROVED",
       "mode": "chat",
-      "stage": null,
+      "stage": "sft",
       "tokenizerName": "neox",
       "toolSet": "utilities-v1",
       "parameterCount": 120000000,
@@ -55,8 +55,8 @@
       "contextLength": 1024,
       "artifact": {
         "url": "https://storage.googleapis.com/techaarvam-byom-cohort-1-models/cohort-1-v1/model02-final-fp32.onnx",
-        "bytes": null,
-        "sha256": null
+        "bytes": 478320686,
+        "sha256": "88f555aec7556038ec2a54b271a10f65484f88c49a4570542dc4e31fae5c4a79"
       },
       "tokenizer": {
         "name": "neox",
@@ -69,7 +69,7 @@
         "temperature": 0.7,
         "topP": 0.9,
         "seed": 7,
-        "maxNewTokens": 64,
+        "maxNewTokens": 96,
         "maxToolRounds": 1
       }
     },
@@ -78,9 +78,9 @@
       "modelNumber": 3,
       "modelId": "model03",
       "displayName": "Python Builder",
-      "status": "PENDING",
+      "status": "APPROVED",
       "mode": "chat",
-      "stage": null,
+      "stage": "toolcall",
       "tokenizerName": "starcoder",
       "toolSet": "coder-v1",
       "parameterCount": 120000000,
@@ -89,8 +89,8 @@
       "contextLength": 1024,
       "artifact": {
         "url": "https://storage.googleapis.com/techaarvam-byom-cohort-1-models/cohort-1-v1/model03-final-fp32.onnx",
-        "bytes": null,
-        "sha256": null
+        "bytes": 473208878,
+        "sha256": "22a0aa4424d8da93d3f9fca85c9efa0bbd57b9d22b3e0092068a47ee093f3c19"
       },
       "tokenizer": {
         "name": "starcoder",
@@ -103,7 +103,7 @@
         "temperature": 0.7,
         "topP": 0.9,
         "seed": 7,
-        "maxNewTokens": 64,
+        "maxNewTokens": 96,
         "maxToolRounds": 1
       }
     },
@@ -137,7 +137,7 @@
         "temperature": 0.7,
         "topP": 0.9,
         "seed": 7,
-        "maxNewTokens": 64,
+        "maxNewTokens": 96,
         "maxToolRounds": 1
       }
     },
@@ -171,7 +171,7 @@
         "temperature": 0.7,
         "topP": 0.9,
         "seed": 7,
-        "maxNewTokens": 96,
+        "maxNewTokens": 64,
         "maxToolRounds": 0
       }
     },
@@ -205,7 +205,7 @@
         "temperature": 0.7,
         "topP": 0.9,
         "seed": 7,
-        "maxNewTokens": 96,
+        "maxNewTokens": 64,
         "maxToolRounds": 0
       }
     },
@@ -239,7 +239,7 @@
         "temperature": 0.7,
         "topP": 0.9,
         "seed": 7,
-        "maxNewTokens": 64,
+        "maxNewTokens": 96,
         "maxToolRounds": 0
       }
     },
@@ -273,7 +273,7 @@
         "temperature": 0.7,
         "topP": 0.9,
         "seed": 7,
-        "maxNewTokens": 64,
+        "maxNewTokens": 96,
         "maxToolRounds": 1
       }
     },
@@ -307,7 +307,7 @@
         "temperature": 0.7,
         "topP": 0.9,
         "seed": 7,
-        "maxNewTokens": 96,
+        "maxNewTokens": 64,
         "maxToolRounds": 0
       }
     },
@@ -341,7 +341,7 @@
         "temperature": 0.7,
         "topP": 0.9,
         "seed": 7,
-        "maxNewTokens": 64,
+        "maxNewTokens": 96,
         "maxToolRounds": 1
       }
     }

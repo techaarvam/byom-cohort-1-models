@@ -8,15 +8,15 @@ the public in-browser demo at `https://techaarvam.com/workshops/byom_demos`.
 
 Each model publishes exactly **one presentation artifact**,
 `modelNN-final-fp32.onnx`, uploaded as a GitHub Release asset under the pinned,
-immutable tag **`cohort-1-v1`**. The artifact is the stage that **evaluated
-best** for that model (SFT, tool-call, or pretrain) — never a "last stage"
+immutable tag **`cohort-1-v1`**. All ten models present the stage that
+**evaluated best** (SFT, tool-call, or pretrain) — never a "last stage"
 assumption, because DPO can degrade output for some models.
 
 | Model | Presented stage | Mode | Artifact |
 |---|---|---|---|
-| model01 Everyday English | pending — final model in training | chat | — |
-| model02 Helpful Assistant | pending — final model in training | chat | — |
-| model03 Python Builder | pending — final model in training | chat | — |
+| model01 Everyday English | `sft` | chat | `model01-final-fp32.onnx` |
+| model02 Helpful Assistant | `sft` | chat | `model02-final-fp32.onnx` |
+| model03 Python Builder | `toolcall` | chat | `model03-final-fp32.onnx` |
 | model04 Polyglot Coder | `sft` | chat | `model04-final-fp32.onnx` |
 | model05 Tamil + English | `pretrain` | next-word | `model05-final-fp32.onnx` |
 | model06 Tamil Voice | `pretrain` | next-word | `model06-final-fp32.onnx` |
